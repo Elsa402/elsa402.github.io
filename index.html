@@ -33,18 +33,23 @@ title: Home
 <div class="docs-section" id="projects">
   <h4>Projects</h4>
 
-  <div class="tab-content">
-    <div class="tab-pane active" id="projects-selected">
-      {% assign selected_projects = site.projects | where: "selected", "y" %}
-      {% for project in selected_projects %}
-        <div class="project">
-          <p class="title"><b>{{ project.title }}</b></p>
-          <p>{{ project.subtitle }}</p>
-          <img src="{{ project.image }}" class="u-max-full-width" />
-          <p>{{ project.description }}</p>
+  <div class="row">
+    {% for project in site.data.projects.projects %}
+    <div class="four columns">
+      <div class="project-container">
+        <div class="project-image-container">
+          <a href="{{ project.url }}">
+            <img src="{{ project.thumbnail }}" class="u-max-full-width" />
+          </a>
         </div>
-      {% endfor %}
+        <div class="project-caption">
+          <b>{{ project.title }}</b><br/>
+          {{ project.subtitle }}
+        </div>
+      </div>
     </div>
+    {% endfor %}
   </div>
 </div>
+
 
