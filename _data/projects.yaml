@@ -5,8 +5,20 @@ projects:
   url: "#"
   selected: y
 
+- title: "Spatiotemporal Distribution of Forest Fires"
+  subtitle: "Climate hazards and social-ecological drivers"
+  thumbnail: /assets/img/forest_fire.jpg
+  url: "#"
+  selected: y
+
 - title: "ESG Risks of Chinese Enterprises Abroad"
   subtitle: "Policy divergence and supply chain sustainability"
   thumbnail: /assets/img/esg_risks.jpg
+  url: "#"
+  selected: y
+
+- title: "AI-Enhanced Urban Research"
+  subtitle: "NLP and tourist spatio-temporal analysis"
+  thumbnail: /assets/img/ai_urban.jpg
   url: "#"
   selected: y
