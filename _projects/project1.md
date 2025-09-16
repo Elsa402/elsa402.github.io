@@ -1,10 +1,4 @@
 ---
-layout: project
-title: AI Agent for Connect Four
-subtitle: My First Intelligent System
----
-
----
 title: "Low-Carbon Village Construction"
 subtitle: "Comparative case studies in Zhejiang, China"
 image: /assets/img/lowcarbon_village.jpg
