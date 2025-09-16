@@ -1,11 +1,14 @@
 ---
-title: "AI-Enhanced Urban Research"
-subtitle: "Natural language processing and tourist behavior"
-image: /assets/img/ai_urban.jpg
+title: "Assessing the Regional Applicability of Land Rent Theory with Spatial Syntax Analysis"
+subtitle: "Interconnection of megacities and land rent patterns"
+image: /assets/img/land_rent.jpg
 description: >
-  As a research fellow at Shanghai Planning and Design Institute, I contributed to AI-driven
-  urban research projects. This included large language model (LLM) corpus curation, 
-  tourist spatio-temporal analysis via NLP, and design strategies that were selected as 
-  finalists in the Fuxing Island MetaCity Competition.
+  As part of the National Undergraduate Training Program for Innovation and Entrepreneurship, 
+  this project explored the applicability of classical land rent theory to modern megacity 
+  regions. Using spatial syntax, I calculated accessibility indices and coupled them with 
+  correlation analysis to examine the interconnection degree among urban centers. 
+  The study highlighted regional structural dynamics, tested theoretical assumptions 
+  against empirical data, and suggested implications for urban network and spatial 
+  economic planning.
 selected: y
 ---
