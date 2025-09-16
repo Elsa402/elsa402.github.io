@@ -1,11 +1,13 @@
 ---
-title: "ESG Risks of Chinese Enterprises Abroad"
-subtitle: "Policy divergence and supply chain sustainability"
-image: /assets/img/esg_risks.jpg
+title: "Analysis of Long-distance Bus Transportation under the Impact of High-speed Rail"
+subtitle: "Competition and passenger mode choice"
+image: /assets/img/bus_vs_hsr.jpg
 description: >
-  During my internship at Deloitte and Industrial Bank, I analyzed how Chinese enterprises
-  expanding overseas navigate ESG challenges under divergent international regulations.
-  The project highlighted risks across industries, regions, and supply chains, and proposed
-  strategies for circular operations and multi-stakeholder governance.
+  Explored the impacts of high-speed rail on long-distance bus passenger services in China.
+  The project assessed advantages and disadvantages of buses in the changing transport system, 
+  focusing on passenger travel preferences. By scraping timetable data for both buses and 
+  high-speed trains, I analyzed factors affecting mode choice with a non-aggregated model, 
+  providing insights into competitiveness, service positioning, and complementary roles 
+  between transport modes in the evolving mobility landscape.
 selected: y
 ---
