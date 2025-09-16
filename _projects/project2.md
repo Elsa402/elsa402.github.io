@@ -1,11 +1,13 @@
 ---
-title: "Spatiotemporal Distribution of Forest Fires"
-subtitle: "Climate hazards and social-ecological drivers"
-image: /assets/img/forest_fire.jpg
+title: "Spatial Distribution Patterns and Influencing Factors of Land Price in Guangzhou"
+subtitle: "Urban economics and land market dynamics"
+image: /assets/img/land_price.jpg
 description: >
-  As a research assistant at Sun Yat-sen University, I mapped the spatiotemporal distribution
-  of forest fires using ArcGIS and automated Python processing. Applying a Generalized Additive
-  Model (GAM), I analyzed biophysical and socio-economic drivers of forest fire occurrence, 
-  offering insights into climate risk management and adaptation.
+  Conducted an in-depth assessment of land price distribution in Guangzhou as part of
+  urban economics coursework. Using regression analysis, I evaluated how natural and social 
+  attributes influenced price formation, visualizing spatial distribution patterns and 
+  temporal trends. The project clarified spatial disparities in land valuation and the role 
+  of planning and social factors in shaping land markets, providing evidence for more 
+  balanced urban land policy.
 selected: y
 ---
