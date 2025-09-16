@@ -1,15 +1,11 @@
 ---
-layout: project
-title: Spatiotemporal Distribution of Forest Fires
-subtitle: Climate hazards and social-ecological drivers
----
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
+title: "Spatiotemporal Distribution of Forest Fires"
+subtitle: "Climate hazards and social-ecological drivers"
 image: /assets/img/forest_fire.jpg
-
 description: >
-  My master's thesis investigated the planning path of low-carbon village construction,
-  combining fieldwork, interviews, and comparative analysis across three villages in Zhejiang.
-  The study identified enabling and hindering factors for clean energy adoption and provided
-  transferable planning insights for sustainable rural development.
+  As a research assistant at Sun Yat-sen University, I mapped the spatiotemporal distribution
+  of forest fires using ArcGIS and automated Python processing. Applying a Generalized Additive
+  Model (GAM), I analyzed biophysical and socio-economic drivers of forest fire occurrence, 
+  offering insights into climate risk management and adaptation.
 selected: y
+---
