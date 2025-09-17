@@ -1,7 +1,7 @@
 ---
 title: "Spatial Distribution Patterns and Influencing Factors of Land Price in Guangzhou"
 subtitle: "Urban economics and land market dynamics"
-image: /assets/img/land_price.jpg
+image: /assets/img/land_price.png
 description: >
   Conducted an in-depth assessment of land price distribution in Guangzhou as part of
   urban economics coursework. Using regression analysis, I evaluated how natural and social 
