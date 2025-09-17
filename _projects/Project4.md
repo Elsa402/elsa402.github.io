@@ -1,7 +1,7 @@
 ---
 title: "Assessing the Regional Applicability of Land Rent Theory with Spatial Syntax Analysis"
 subtitle: "Interconnection of megacities and land rent patterns"
-image: /assets/img/land_rent.jpg
+image: /assets/img/land_rent.png
 description: >
   As part of the National Undergraduate Training Program for Innovation and Entrepreneurship, 
   this project explored the applicability of classical land rent theory to modern megacity 
