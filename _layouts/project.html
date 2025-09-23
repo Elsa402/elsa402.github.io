@@ -4,7 +4,7 @@ layout: default
 <div class="docs-section">
 
   {% if page.subtitle == "" or page.subtitle == nil %}
-  	<h3>{{ page.title }}</h3>
+    <h3>{{ page.title }}</h3>
   {% else %}
     <div class="title-subtitle">
       <h3>{{ page.title }}</h3>
@@ -12,6 +12,23 @@ layout: default
     </div>
   {% endif %}
 
-  {{ content }}
+  <!-- 自动显示封面图 -->
+  {% if page.image %}
+    <div class="project-image">
+      <img src="{{ page.image }}" class="u-max-full-width" alt="{{ page.title }}">
+    </div>
+  {% endif %}
+
+  <!-- 自动显示简介 -->
+  {% if page.description %}
+    <div class="project-description">
+      <p>{{ page.description }}</p>
+    </div>
+  {% endif %}
+
+  <!-- 如果 .md 里有正文，照常显示 -->
+  <div class="project-content">
+    {{ content }}
+  </div>
 
 </div>
