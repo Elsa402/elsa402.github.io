@@ -34,12 +34,13 @@ title: Home
   <h4>Projects</h4>
 
   <div class="row">
-    {% for project in site.projects %}
+    {% assign selected_projects = site.projects | where: "selected", "y" %}
+    {% for project in selected_projects %}
     <div class="four columns">
       <div class="project-container">
         <div class="project-image-container">
-          <a href="{{ project.url }}">
-            <img src="{{ project.thumbnail }}" class="u-max-full-width" />
+          <a href="{{ project.url | default: project.permalink }}">
+            <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}">
           </a>
         </div>
         <div class="project-caption">
