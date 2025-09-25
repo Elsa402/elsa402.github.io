@@ -1,7 +1,7 @@
 ---
 title: "Spatial Distribution Patterns and Influencing Factors of Land Price in Guangzhou"
 subtitle: "Urban economics and land market dynamics"
-thumbnail: /assets/img/land_price.png
+thumbnail: /assets/img/land_price.jpg
 layout: project
 permalink: /projects/land_price/
 selected: y
