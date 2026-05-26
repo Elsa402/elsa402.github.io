@@ -4,125 +4,139 @@ title: Home
 ---
 
 <style>
-/* ===== Fixed alternating timeline for Vita section ===== */
+/* ===== Completely rebuilt timeline ===== */
 
 #resume .timeline {
-  position: relative;
-  width: 100%;
-  margin: 40px auto;
-  padding: 20px 0;
-  list-style: none;
+  position: relative !important;
+  width: 100% !important;
+  max-width: 980px !important;
+  margin: 40px auto !important;
+  padding: 0 !important;
+  list-style: none !important;
 }
 
 #resume .timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 4px;
-  background: #444;
-  transform: translateX(-50%);
+  content: "" !important;
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  width: 5px !important;
+  background: rgb(80,80,80) !important;
+  transform: translateX(-50%) !important;
+  z-index: 1 !important;
 }
 
 #resume .timeline li {
-  position: relative;
-  width: 50%;
-  margin: 0 0 50px 0;
-  padding: 0 55px 0 0;
-  box-sizing: border-box;
-  text-align: right;
-  list-style: none;
+  position: relative !important;
+  width: 50% !important;
+  box-sizing: border-box !important;
+  padding: 0 56px 58px 0 !important;
+  margin: 0 !important;
+  list-style: none !important;
+  text-align: right !important;
+  clear: both !important;
 }
 
 #resume .timeline li:nth-child(even) {
-  left: 50%;
-  padding: 0 0 0 55px;
-  text-align: left;
+  margin-left: 50% !important;
+  padding: 0 0 58px 56px !important;
+  text-align: left !important;
+}
+
+#resume .timeline li::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 8px !important;
+  right: -13px !important;
+  width: 16px !important;
+  height: 16px !important;
+  background: #fff !important;
+  border: 5px solid rgb(51, 0, 111) !important;
+  border-radius: 50% !important;
+  z-index: 3 !important;
+}
+
+#resume .timeline li:nth-child(even)::before {
+  left: -13px !important;
+  right: auto !important;
 }
 
 #resume .timeline li::after {
-  content: "";
-  position: absolute;
-  top: 12px;
-  right: -13px;
-  width: 18px;
-  height: 18px;
-  background: #fff;
-  border: 5px solid #3b007d;
-  border-radius: 50%;
-  z-index: 2;
+  display: none !important;
 }
 
-#resume .timeline li:nth-child(even)::after {
-  left: -13px;
-  right: auto;
-}
-
-#resume .timeline .direction-l,
-#resume .timeline .direction-r {
-  width: 100%;
-  float: none;
+#resume .timeline .timeline-card {
+  position: relative !important;
+  width: 100% !important;
 }
 
 #resume .timeline .flag-wrapper {
-  position: relative;
-  display: block;
-  text-align: inherit;
+  display: block !important;
+  position: relative !important;
+  text-align: inherit !important;
 }
 
 #resume .timeline .flag {
-  display: inline-block;
-  max-width: 100%;
-  padding: 8px 14px;
-  background: #f8f8f8;
-  border-radius: 6px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.35;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
-  text-align: inherit;
+  display: inline-block !important;
+  position: relative !important;
+  max-width: 100% !important;
+  padding: 7px 12px !important;
+  background: rgb(248,248,248) !important;
+  border-radius: 5px !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  text-align: inherit !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.18) !important;
+}
+
+/* Kill old timeline.css arrows and circles */
+#resume .timeline .flag::before,
+#resume .timeline .flag::after {
+  display: none !important;
+  content: none !important;
 }
 
 #resume .timeline .time-wrapper {
-  display: block;
-  margin-top: 8px;
+  display: block !important;
+  float: none !important;
+  margin-top: 6px !important;
+  line-height: 1 !important;
+  font-size: 0.72em !important;
+  color: rgb(51, 0, 111) !important;
 }
 
 #resume .timeline .time {
-  display: inline-block;
-  padding: 4px 10px;
-  background: #f5f3f8;
-  color: #3b007d;
-  font-size: 14px;
-  line-height: 1.4;
+  display: inline-block !important;
+  padding: 4px 6px !important;
+  background: rgb(248,248,248) !important;
 }
 
 #resume .timeline .desc {
-  margin-top: 14px;
-  font-size: 16px;
-  line-height: 1.45;
-  text-align: inherit;
+  margin: 14px 0 0 0 !important;
+  font-size: 0.82em !important;
+  line-height: 1.5em !important;
+  text-align: inherit !important;
 }
 
-/* Mobile version */
-@media screen and (max-width: 768px) {
+/* Mobile */
+@media screen and (max-width: 660px) {
   #resume .timeline::before {
-    left: 20px;
+    left: 18px !important;
   }
 
   #resume .timeline li,
   #resume .timeline li:nth-child(even) {
-    left: 0;
-    width: 100%;
-    padding: 0 0 0 60px;
-    text-align: left;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 0 0 45px 56px !important;
+    text-align: left !important;
   }
 
-  #resume .timeline li::after,
-  #resume .timeline li:nth-child(even)::after {
-    left: 7px;
-    right: auto;
+  #resume .timeline li::before,
+  #resume .timeline li:nth-child(even)::before {
+    left: 5px !important;
+    right: auto !important;
   }
 }
 </style>
@@ -185,7 +199,7 @@ title: Home
   <ul class="timeline">
     {% for exp in site.data.experience.experiences %}
     <li>
-      <div>
+      <div class="timeline-card">
         <div class="flag-wrapper">
           <span class="flag">{{ exp.place }}</span>
           <span class="time-wrapper">
