@@ -48,7 +48,8 @@ title: Home
   content: "" !important;
   position: absolute !important;
   top: 8px !important;
-  right: -25px !important;
+  left: 100% !important;
+  transform: translateX(-50%) !important;
   width: 16px !important;
   height: 16px !important;
   background: #fff !important;
@@ -57,11 +58,12 @@ title: Home
   z-index: 3 !important;
 }
 
-#resume .timeline li:nth-child(even)::before {
-  left: -8px !important;
-  right: auto !important;
+#resume .timeline li:nth-child(even) {
+  margin-left: 50% !important;
+  padding: 0 0 58px 56px !important;
+  text-align: left !important;
+  clear: both !important;
 }
-
 #resume .timeline li::after {
   display: none !important;
 }
