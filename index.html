@@ -2,6 +2,131 @@
 layout: default
 title: Home
 ---
+
+<style>
+/* ===== Fixed alternating timeline for Vita section ===== */
+
+#resume .timeline {
+  position: relative;
+  width: 100%;
+  margin: 40px auto;
+  padding: 20px 0;
+  list-style: none;
+}
+
+#resume .timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #444;
+  transform: translateX(-50%);
+}
+
+#resume .timeline li {
+  position: relative;
+  width: 50%;
+  margin: 0 0 50px 0;
+  padding: 0 55px 0 0;
+  box-sizing: border-box;
+  text-align: right;
+  list-style: none;
+}
+
+#resume .timeline li:nth-child(even) {
+  left: 50%;
+  padding: 0 0 0 55px;
+  text-align: left;
+}
+
+#resume .timeline li::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: -13px;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 5px solid #3b007d;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+#resume .timeline li:nth-child(even)::after {
+  left: -13px;
+  right: auto;
+}
+
+#resume .timeline .direction-l,
+#resume .timeline .direction-r {
+  width: 100%;
+  float: none;
+}
+
+#resume .timeline .flag-wrapper {
+  position: relative;
+  display: block;
+  text-align: inherit;
+}
+
+#resume .timeline .flag {
+  display: inline-block;
+  max-width: 100%;
+  padding: 8px 14px;
+  background: #f8f8f8;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.35;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.18);
+  text-align: inherit;
+}
+
+#resume .timeline .time-wrapper {
+  display: block;
+  margin-top: 8px;
+}
+
+#resume .timeline .time {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #f5f3f8;
+  color: #3b007d;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#resume .timeline .desc {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.45;
+  text-align: inherit;
+}
+
+/* Mobile version */
+@media screen and (max-width: 768px) {
+  #resume .timeline::before {
+    left: 20px;
+  }
+
+  #resume .timeline li,
+  #resume .timeline li:nth-child(even) {
+    left: 0;
+    width: 100%;
+    padding: 0 0 0 60px;
+    text-align: left;
+  }
+
+  #resume .timeline li::after,
+  #resume .timeline li:nth-child(even)::after {
+    left: 7px;
+    right: auto;
+  }
+}
+</style>
+
 <!-- ========== BIO ========== -->
 <div class="docs-section" id="bio">
   <h4>Bio</h4>
@@ -60,16 +185,17 @@ title: Home
   <ul class="timeline">
     {% for exp in site.data.experience.experiences %}
     <li>
-      {% if exp.category == "work" %}
-      <div class="direction-l">
-      {% else %}
-      <div class="direction-r">
-      {% endif %}
+      <div>
         <div class="flag-wrapper">
           <span class="flag">{{ exp.place }}</span>
-          <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+          <span class="time-wrapper">
+            <span class="time">{{ exp.time }}</span>
+          </span>
         </div>
-        <div class="desc"><b>{{ exp.title }}</b> <br/> {{ exp.subtitle }}</div>
+        <div class="desc">
+          <b>{{ exp.title }}</b><br/>
+          {{ exp.subtitle }}
+        </div>
       </div>
     </li>
     {% endfor %}
