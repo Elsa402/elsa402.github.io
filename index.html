@@ -460,23 +460,54 @@ title: Home
 <div class="docs-section" id="projects">
   <h4>Projects</h4>
 
-  <div class="row">
-    {% assign selected_projects = site.projects | where: "selected", "y" %}
-    {% for project in selected_projects %}
-    <div class="four columns">
-      <div class="project-container">
-        <div class="project-image-container">
-          <a href="{{ project.url | default: project.permalink }}">
-            <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}">
+  <ul class="tab-nav project-tab-nav" role="tablist" aria-label="Project research areas">
+    <li><a class="button active" data-ref="#projects-cultural" href="#projects-cultural">Cultural and Tourism Research</a></li>
+    <li><a class="button" data-ref="#projects-transportation" href="#projects-transportation">Transportation Planning</a></li>
+    <li><a class="button" data-ref="#projects-environment" href="#projects-environment">Environmental Sustainability</a></li>
+  </ul>
+
+  <div class="tab-content project-tab-content">
+    <div class="tab-pane active" id="projects-cultural">
+      <p class="project-empty-state">Projects in this research area will be added soon.</p>
+    </div>
+
+    <div class="tab-pane" id="projects-transportation">
+      <div class="project-grid">
+        {% assign transportation_projects = site.projects | where: "category", "transportation-planning" %}
+        {% for project in transportation_projects %}
+        <article class="project-container">
+          <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
+            <div class="project-image-container">
+              <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}">
+            </div>
+            <div class="project-caption">
+              <strong>{{ project.title }}</strong>
+              <span>{{ project.subtitle }}</span>
+            </div>
           </a>
-        </div>
-        <div class="project-caption">
-          <b>{{ project.title }}</b><br/>
-          {{ project.subtitle }}
-        </div>
+        </article>
+        {% endfor %}
       </div>
     </div>
-    {% endfor %}
+
+    <div class="tab-pane" id="projects-environment">
+      <div class="project-grid">
+        {% assign environmental_projects = site.projects | where: "category", "environmental-sustainability" %}
+        {% for project in environmental_projects %}
+        <article class="project-container">
+          <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
+            <div class="project-image-container">
+              <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}">
+            </div>
+            <div class="project-caption">
+              <strong>{{ project.title }}</strong>
+              <span>{{ project.subtitle }}</span>
+            </div>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </div>
 
@@ -497,4 +528,15 @@ title: Home
     </li>
     {% endfor %}
   </ul>
+</div>
+
+<!-- ========== TEMPLATE ACKNOWLEDGEMENT ========== -->
+<div class="docs-section template-acknowledgement" id="template">
+  <h4>Acknowledgement</h4>
+  <p>
+    To build this site I have made use of a Jekyll template created by Martin Saveski. Thank you!
+    If you would like to use this template please go to
+    <a href="https://web.stanford.edu/~msaveski/" target="_blank" rel="noopener noreferrer">Martin Saveski's site</a>
+    for the Github repository.
+  </p>
 </div>
