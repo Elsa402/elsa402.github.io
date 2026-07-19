@@ -485,8 +485,7 @@ title: Home
   <h4>Vitæ</h4>
 
   <ul class="timeline shared-timeline" aria-label="Education and professional experience timeline">
-    {% assign sorted_experiences = site.data.experience.experiences | sort: "order" | reverse %}
-    {% for exp in sorted_experiences %}
+    {% for exp in site.data.experience.experiences %}
     <li class="{% if exp.category == 'school' %}side-left{% else %}side-right{% endif %}">
       <div class="timeline-card">
         <div class="flag-wrapper">
