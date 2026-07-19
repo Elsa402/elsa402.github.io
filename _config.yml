@@ -2,6 +2,10 @@ source:      .
 destination: ./_site
 includes:    ./_includes
 baseurl: ""
+url: "https://elsa402.github.io"
+title: "Shasha Tian"
+author: "Shasha Tian"
+description: "Shasha Tian is an urban planner and research fellow specializing in urban planning, transportation, cultural tourism, and environmental sustainability."
 
 collections:
   projects:
