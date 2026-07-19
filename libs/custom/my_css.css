@@ -54,6 +54,34 @@ h4 {
 .image {
   text-align: center; }
 
+/*  ================ Publication styling  ================ */
+.publication-note {
+  margin-bottom: 28px;
+  color: #555;
+}
+.publication-entry h5 {
+  margin-bottom: 8px;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.publication-authors,
+.publication-venue {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 24px;
+}
+.publication-paper-link {
+  margin-top: 8px;
+  min-width: 112px;
+  text-align: center;
+  text-transform: none;
+  font-size: 11px;
+  font-weight: 100;
+  line-height: 25px;
+}
+
 /*  ================ Project styling  ================ */
 .project-container {
   margin-bottom: 30px;

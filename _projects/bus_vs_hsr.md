@@ -5,7 +5,7 @@ thumbnail: /assets/img/bus_vs_hsr.jpg
 layout: project
 permalink: /projects/bus_vs_hsr/
 selected: y
-category: transportation-planning
+category: hidden
 description: >
   This project examined how the rapid expansion of high-speed rail in China reshaped 
   long-distance bus passenger transportation. It assessed passenger preferences, 

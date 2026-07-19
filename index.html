@@ -456,6 +456,20 @@ title: Home
   </p>
 </div>
 
+<!-- ========== PUBLICATIONS ========== -->
+<div class="docs-section" id="publications">
+  <h4>Publications</h4>
+
+  <p class="publication-note">* indicates supervisor.</p>
+
+  <article class="publication-entry">
+    <h5>Driving Factors and Carbon Transfer of Industrial Carbon Emissions in Guangdong Province under the Background of Industrial Transfer</h5>
+    <p class="publication-authors"><strong>Shaojian Wang*</strong>, Shasha Tian, et al.</p>
+    <p class="publication-venue"><em>Geographical Research</em> 40, no. 09 (2021): 2606–2622. [In Chinese, CSSCI].</p>
+    <a class="button publication-paper-link" href="https://dlyj.ac.cn/EN/abstract/abstract50345.shtml" target="_blank" rel="noopener noreferrer">Paper</a>
+  </article>
+</div>
+
 <!-- ========== PROJECTS ========== -->
 <div class="docs-section" id="projects">
   <h4>Projects</h4>
@@ -468,7 +482,21 @@ title: Home
 
   <div class="tab-content project-tab-content">
     <div class="tab-pane active" id="projects-cultural">
-      <p class="project-empty-state">Projects in this research area will be added soon.</p>
+      <div class="project-grid">
+        {% assign cultural_projects = site.projects | where: "category", "cultural-tourism-research" %}
+        {% for project in cultural_projects %}
+        <article class="project-container">
+          <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
+            <div class="project-image-container">
+              <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}">
+            </div>
+            <div class="project-caption">
+              <strong>{{ project.title }}</strong>
+            </div>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
     </div>
 
     <div class="tab-pane" id="projects-transportation">
@@ -482,7 +510,6 @@ title: Home
             </div>
             <div class="project-caption">
               <strong>{{ project.title }}</strong>
-              <span>{{ project.subtitle }}</span>
             </div>
           </a>
         </article>
@@ -501,7 +528,6 @@ title: Home
             </div>
             <div class="project-caption">
               <strong>{{ project.title }}</strong>
-              <span>{{ project.subtitle }}</span>
             </div>
           </a>
         </article>
@@ -536,7 +562,7 @@ title: Home
   <p>
     To build this site I have made use of a Jekyll template created by Martin Saveski. Thank you!
     If you would like to use this template please go to
-    <a href="https://web.stanford.edu/~msaveski/" target="_blank" rel="noopener noreferrer">Martin Saveski's site</a>
+    <a href="https://faculty.washington.edu/msaveski/" target="_blank" rel="noopener noreferrer">Martin Saveski's site</a>
     for the Github repository.
   </p>
 </div>

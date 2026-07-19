@@ -5,6 +5,7 @@ thumbnail: /assets/img/land_rent.jpg
 layout: project
 permalink: /projects/land_rent/
 selected: y
+category: hidden
 description: >
   This project tested the applicability of classical land rent theory to modern megacity 
   regions by combining spatial syntax with economic analysis. It assessed accessibility, 
