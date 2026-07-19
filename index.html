@@ -4,141 +4,142 @@ title: Home
 ---
 
 <style>
-/* ===== Completely rebuilt timeline ===== */
-
+/* Clean single-column Vitae layout. The !important rules neutralize the
+   legacy timeline stylesheet that ships with the original template. */
 #resume .timeline {
   position: relative !important;
   width: 100% !important;
-  max-width: 980px !important;
-  margin: 40px auto !important;
-  padding: 0 !important;
+  max-width: 820px !important;
+  margin: 32px auto 0 !important;
+  padding: 0 0 0 30px !important;
   list-style: none !important;
+  box-sizing: border-box !important;
 }
 
 #resume .timeline::before {
   content: "" !important;
   position: absolute !important;
-  top: 0 !important;
-  bottom: 0 !important;
-  left: 50% !important;
-  width: 5px !important;
-  background: rgb(80,80,80) !important;
-  transform: translateX(-50%) !important;
-  z-index: 1 !important;
+  top: 8px !important;
+  bottom: 8px !important;
+  left: 7px !important;
+  width: 2px !important;
+  background: #d9d3e4 !important;
 }
 
-#resume .timeline li {
-  position: relative !important;
-  width: 50% !important;
-  box-sizing: border-box !important;
-  padding: 0 56px 58px 0 !important;
-  margin: 0 !important;
-  list-style: none !important;
-  text-align: right !important;
-  clear: both !important;
-}
-
+#resume .timeline li,
 #resume .timeline li:nth-child(even) {
-  margin-left: 50% !important;
-  padding: 0 0 58px 56px !important;
+  position: relative !important;
+  float: none !important;
+  clear: both !important;
+  width: 100% !important;
+  margin: 0 0 22px !important;
+  padding: 0 !important;
   text-align: left !important;
+  list-style: none !important;
 }
 
-#resume .timeline li::before {
+#resume .timeline li::before,
+#resume .timeline li:nth-child(even)::before {
   content: "" !important;
   position: absolute !important;
-  top: 8px !important;
-  left: 100% !important;
-  transform: translateX(-50%) !important;
-  width: 16px !important;
-  height: 16px !important;
-  background: #fff !important;
-  border: 5px solid rgb(51, 0, 111) !important;
+  top: 20px !important;
+  left: -30px !important;
+  width: 12px !important;
+  height: 12px !important;
+  transform: translateX(1px) !important;
+  border: 3px solid #33006f !important;
   border-radius: 50% !important;
-  z-index: 3 !important;
+  background: #fff !important;
+  box-sizing: border-box !important;
+  z-index: 2 !important;
 }
 
-#resume .timeline li:nth-child(even) {
-  margin-left: 50% !important;
-  padding: 0 0 58px 56px !important;
-  text-align: left !important;
-  clear: both !important;
-}
-#resume .timeline li::after {
-  display: none !important;
-}
-
-#resume .timeline .timeline-card {
-  position: relative !important;
-  width: 100% !important;
-}
-
-#resume .timeline .flag-wrapper {
-  display: block !important;
-  position: relative !important;
-  text-align: inherit !important;
-}
-
-#resume .timeline .flag {
-  display: inline-block !important;
-  position: relative !important;
-  max-width: 100% !important;
-  padding: 7px 12px !important;
-  background: rgb(248,248,248) !important;
-  border-radius: 5px !important;
-  font-weight: 600 !important;
-  line-height: 1.35 !important;
-  text-align: inherit !important;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.18) !important;
-}
-
-/* Kill old timeline.css arrows and circles */
+#resume .timeline li::after,
 #resume .timeline .flag::before,
 #resume .timeline .flag::after {
   display: none !important;
   content: none !important;
 }
 
+#resume .timeline .timeline-card {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 8px 20px !important;
+  width: 100% !important;
+  padding: 18px 20px !important;
+  border: 1px solid #e6e2ec !important;
+  border-radius: 8px !important;
+  background: #fff !important;
+  box-shadow: 0 2px 8px rgba(51, 0, 111, 0.07) !important;
+  box-sizing: border-box !important;
+}
+
+#resume .timeline .flag-wrapper {
+  display: contents !important;
+}
+
+#resume .timeline .flag {
+  display: block !important;
+  position: static !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  color: #222 !important;
+}
+
 #resume .timeline .time-wrapper {
   display: block !important;
   float: none !important;
-  margin-top: 6px !important;
-  line-height: 1 !important;
-  font-size: 0.72em !important;
-  color: rgb(51, 0, 111) !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+  font-size: 0.78em !important;
+  line-height: 1.4 !important;
+  color: #33006f !important;
 }
 
 #resume .timeline .time {
-  display: inline-block !important;
-  padding: 4px 6px !important;
-  background: rgb(248,248,248) !important;
+  display: inline !important;
+  padding: 0 !important;
+  background: transparent !important;
 }
 
 #resume .timeline .desc {
-  margin: 14px 0 0 0 !important;
-  font-size: 0.82em !important;
-  line-height: 1.5em !important;
-  text-align: inherit !important;
+  grid-column: 1 / -1 !important;
+  margin: 0 !important;
+  font-size: 0.88em !important;
+  line-height: 1.55 !important;
+  text-align: left !important;
+  color: #555 !important;
 }
 
-/* Mobile */
 @media screen and (max-width: 660px) {
-  #resume .timeline::before {
-    left: 18px !important;
+  #resume .timeline {
+    padding-left: 24px !important;
   }
 
-  #resume .timeline li,
-  #resume .timeline li:nth-child(even) {
-    width: 100% !important;
-    margin-left: 0 !important;
-    padding: 0 0 45px 56px !important;
-    text-align: left !important;
+  #resume .timeline::before {
+    left: 5px !important;
   }
 
   #resume .timeline li::before,
   #resume .timeline li:nth-child(even)::before {
-    left: 5px !important;
-    right: auto !important;
+    left: -24px !important;
+  }
+
+  #resume .timeline .timeline-card {
+    display: block !important;
+    padding: 15px 16px !important;
+  }
+
+  #resume .timeline .time-wrapper {
+    margin-top: 5px !important;
+    white-space: normal !important;
+  }
+
+  #resume .timeline .desc {
+    margin-top: 10px !important;
   }
 }
 </style>
