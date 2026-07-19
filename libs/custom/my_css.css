@@ -1,4 +1,6 @@
 h4 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
   letter-spacing: .1rem; }
 .container {
   max-width: 800px; }
@@ -69,6 +71,97 @@ h4 {
 }
 .project-caption {
   padding: 3px;
+}
+.project-tab-nav {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  margin: 24px 0 30px;
+  padding-left: 0;
+}
+.project-tab-nav li {
+  display: flex;
+  margin-bottom: 0;
+}
+.project-tab-nav li .button {
+  height: auto;
+  min-height: 44px;
+  margin: 0 0 -1px;
+  padding: 11px 16px;
+  line-height: 1.35;
+  white-space: normal;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: .03rem;
+}
+.project-tab-content {
+  min-height: 210px;
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+.project-card-link {
+  display: block;
+  color: #222;
+  text-decoration: none;
+}
+.project-card-link:hover {
+  color: #33006f;
+}
+.project-card-link .project-image-container img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+.project-card-link .project-caption {
+  padding: 10px 4px 0;
+}
+.project-card-link .project-caption strong,
+.project-card-link .project-caption span {
+  display: block;
+}
+.project-card-link .project-caption strong {
+  line-height: 1.4;
+}
+.project-card-link .project-caption span {
+  margin-top: 5px;
+  color: #666;
+  line-height: 1.45;
+}
+.project-empty-state {
+  margin: 0;
+  padding: 36px;
+  border: 1px solid #e6e2ec;
+  border-radius: 6px;
+  background: #f7f7f7;
+  color: #666;
+  text-align: center;
+}
+.template-acknowledgement p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+  .project-tab-nav {
+    display: block;
+    border-bottom: 0;
+  }
+  .project-tab-nav li,
+  .project-tab-nav li .button {
+    display: block;
+    width: 100%;
+  }
+  .project-tab-nav li .button {
+    margin: 0 0 7px;
+    border-bottom: 1px solid #bbb;
+    border-radius: 4px;
+  }
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Larger than phone */
