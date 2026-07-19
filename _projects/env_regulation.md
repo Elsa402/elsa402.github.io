@@ -5,6 +5,7 @@ thumbnail: /assets/img/env_regulation.jpg
 permalink: /projects/env_regulation/
 layout: project
 selected: y
+category: environmental-sustainability
 ---
 
 <img src="/assets/img/env_regulation.jpg" class="u-max-full-width">
