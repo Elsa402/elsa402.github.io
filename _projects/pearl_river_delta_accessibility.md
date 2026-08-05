@@ -8,11 +8,11 @@ category: transportation-planning
 ---
 
 ### 1. Research Questions & Background
-**Background:** Rapid regional integration in the Pearl River Delta (PRD) increases the importance of transportation accessibility in shaping spatial structure.
+**Background:** Rapid regional integration in the Pearl River Delta (PRD) increases the importance of transportation accessibility in shaping spatial structure.<br>
 **Innovation:** Extends traditional Space Syntax models to a regional multi-modal transportation network. Combines space syntax metrics, Points of Interest (POI) density, Pearson correlation analysis, and coupling coordination degree modeling.
 
 ### 2. Data & Methodology
-**Data:** OpenStreetMap road/rail networks (railways, highways, national/provincial roads) and five categories of POI data (residential, financial, life services, tourism/leisure, and government institutions).
+**Data:** OpenStreetMap road/rail networks (railways, highways, national/provincial roads) and five categories of POI data (residential, financial, life services, tourism/leisure, and government institutions).<br>
 **Methodology:** Space Syntax Analysis (Global/Local Integration, Connectivity, Choice/Betweenness), Kernel Density Analysis, Moran’s I, Pearson Correlation Analysis, and Coupling Coordination Model.
 
 ### 3. Key Results
