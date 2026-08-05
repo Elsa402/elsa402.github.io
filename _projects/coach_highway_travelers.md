@@ -18,8 +18,8 @@ category: transportation-planning
   3. What spatial and service adaptation strategies can long-distance buses adopt to survive in the HSR era?
 
 ### 2. Data & Methodology
-**Data**: Bus departure frequency obtained via Python web scraping, alongside passenger evaluation questionnaires.
-**Methodologies**: Network structure analysis, Discrete Choice Modeling (Binary Logistic Regression), and Structural Equation Modeling (SEM).
+**Data**: Bus departure frequency obtained via Python web scraping, alongside passenger evaluation questionnaires.<br>
+**Methodologies**: Network structure analysis, Discrete Choice Modeling (Binary Logistic Regression), and Structural Equation Modeling (SEM).<br>
 **Dimensions Analyzed**: Tangibility/Environment, Reliability, Responsiveness/Flexibility, Assurance/Service Quality, and Empathy/Comfort.
 
 ### 3. Key Results
