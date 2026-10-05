@@ -1,6 +1,6 @@
 ---
 title: "Understanding Tourist Perceptions of Urban Waterfronts"
-thumbnail: /assets/img/tourist-waterfronts-thumb.jpg
+thumbnail: /assets/img/tourist-waterfronts-mobile.jpg
 layout: project
 permalink: /projects/tourist-waterfronts/
 selected: y

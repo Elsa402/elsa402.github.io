@@ -1,6 +1,6 @@
 ---
 title: "User Profiling and Spatial Preference Analysis of Music Festival Attendees"
-thumbnail: /assets/img/music-festival-attendees-thumb.jpg
+thumbnail: /assets/img/music-festival-attendees-mobile.jpg
 layout: project
 permalink: /projects/music-festival-attendees/
 selected: y
