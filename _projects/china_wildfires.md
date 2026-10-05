@@ -1,6 +1,6 @@
 ---
 title: "Spatiotemporal Evolution Layout and Driving Factors of Wildfires in China"
-thumbnail: /assets/img/china-wildfires.png
+thumbnail: /assets/img/china-wildfires-thumb.jpg
 layout: project
 permalink: /projects/china-wildfires/
 selected: y
@@ -16,7 +16,7 @@ category: environmental-sustainability
 
 ### 3. Key Results & Personal Contribution
 **Findings:** Revealed clear seasonal and regional clustering of wildfire occurrences. GAM modeling demonstrated that climate variables (temperature and precipitation) and terrain slope exert non-linear influences on wildfire frequency, moderated by human activity intensity (population and GDP).
-<img src="/assets/img/WF_1.png" class="u-max-full-width" alt="Driving Factors and Carbon Transfer of Industrial Carbon Emissions in Guangdong Province">
-<img src="/assets/img/WF_2.png" class="u-max-full-width" alt="Driving Factors and Carbon Transfer of Industrial Carbon Emissions in Guangdong Province">
-<img src="/assets/img/WF_3.png" class="u-max-full-width" alt="Driving Factors and Carbon Transfer of Industrial Carbon Emissions in Guangdong Province">
-<img src="/assets/img/WF_4.png" class="u-max-full-width" alt="Driving Factors and Carbon Transfer of Industrial Carbon Emissions in Guangdong Province">
+<img src="/assets/img/WF_1-optimized.jpg" class="u-max-full-width" alt="Wildfire spatiotemporal analysis in China" loading="lazy" decoding="async">
+<img src="/assets/img/WF_2-optimized.jpg" class="u-max-full-width" alt="Wildfire spatiotemporal analysis in China" loading="lazy" decoding="async">
+<img src="/assets/img/WF_3-optimized.jpg" class="u-max-full-width" alt="Wildfire spatiotemporal analysis in China" loading="lazy" decoding="async">
+<img src="/assets/img/WF_4-optimized.jpg" class="u-max-full-width" alt="Wildfire spatiotemporal analysis in China" loading="lazy" decoding="async">

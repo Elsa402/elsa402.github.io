@@ -8,7 +8,7 @@ selected: y
 category: hidden
 ---
 
-<img src="/assets/img/env_regulation.jpg" class="u-max-full-width">
+<img src="/assets/img/env_regulation.jpg" class="u-max-full-width" alt="Environmental regulation and overseas enterprise assessment" loading="lazy" decoding="async">
 
 <p>
 This study examined how Chinese enterprises expanding overseas confront ESG challenges

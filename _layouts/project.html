@@ -15,7 +15,7 @@ layout: default
   <!-- 自动显示封面图 -->
   {% if page.image %}
     <div class="project-image">
-      <img src="{{ page.image }}" class="u-max-full-width" alt="{{ page.title }}">
+      <img src="{{ page.image }}" class="u-max-full-width" alt="{{ page.title }}" loading="lazy" decoding="async">
     </div>
   {% endif %}
 

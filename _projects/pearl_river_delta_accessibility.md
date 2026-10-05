@@ -17,12 +17,12 @@ category: transportation-planning
 
 ### 3. Key Results
 **Accessibility:** Transportation accessibility follows a distinct core-periphery structure across the PRD.
-<img src="/assets/img/SS_1.png" class="u-max-full-width" alt="Space Syntax-Based Accessibility Analysis of the Pearl River Delta">
-<img src="/assets/img/SS_2.jpg" class="u-max-full-width" alt="Space Syntax-Based Accessibility Analysis of the Pearl River Delta">
-<img src="/assets/img/SS_3.png" class="u-max-full-width" alt="Space Syntax-Based Accessibility Analysis of the Pearl River Delta">
+<img src="/assets/img/SS_1-optimized.jpg" class="u-max-full-width" alt="Space Syntax-Based Accessibility Analysis of the Pearl River Delta" loading="lazy" decoding="async">
+<img src="/assets/img/SS_2-optimized.jpg" class="u-max-full-width" alt="Space Syntax-Based Accessibility Analysis of the Pearl River Delta" loading="lazy" decoding="async">
+<img src="/assets/img/SS_3-optimized.jpg" class="u-max-full-width" alt="Space Syntax-Based Accessibility Analysis of the Pearl River Delta" loading="lazy" decoding="async">
 
 **Accessibility–Land Use Relationship and Coupling Coordination:**<br>Strongest coordination between accessibility and land-use intensity was found for tourism/leisure facilities and financial services, concentrated around core metropolitan nodes (e.g., central Guangzhou and Shenzhen).
-<img src="/assets/img/SS_4.png" class="u-max-full-width" alt="Space Syntax-Based Accessibility Analysis of the Pearl River Delta">
+<img src="/assets/img/SS_4-optimized.jpg" class="u-max-full-width" alt="Space Syntax-Based Accessibility Analysis of the Pearl River Delta" loading="lazy" decoding="async">
 | Coupling Degree | High Coupling Area | Moderate-to-High Coupling Area |
 | :--- | :--- | :--- |
 | **Financial POI** | Guangzhou City Center | Shenzhen City Center, Jiangmen City Center |
