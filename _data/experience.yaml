@@ -1,38 +1,45 @@
 experiences:
-- place: "AIGC Laboratory, Shanghai Planning and Design Institute"
-  time: "Dec 2024 – Present"
-  title: "Research Fellow"
-  subtitle: "Innovation-oriented urban renewal & AI-enhanced research"
+- place: "City University of Hong Kong"
+  time: "June 2026 – Present"
+  title: "Research Assistant"
+  subtitle: "Experience segregation related research"
   category: "work"
   row: 1
+
+- place: "AIGC Laboratory, Shanghai Planning and Design Institute"
+  time: "Dec 2024 – Mar 2026"
+  title: "Research Fellow"
+  subtitle: "NLP Analysis & Xingkong Urban Knowledge App Knowledge Curation & Evaluation"
+  category: "work"
+  row: 2
 
 - place: "Industrial Bank (Fortune Global 500)"
   time: "Aug 2024 – Nov 2024"
   title: "Carbon Finance Research Intern"
   subtitle: "Carbon accounting & ESG disclosure (ISSB aligned)"
   category: "intern"
-  row: 2
+  row: 3
 
 - place: "Tongji University"
   time: "Sept 2021 – Sept 2024"
   title: "M.Eng. in Urban Planning"
   subtitle: "Thesis: Planning Path of Low-Carbon Villages | GPA 4.36/5 (Top 25%)"
   category: "school"
-  row: 3
+  row: 4
 
 - place: "Deloitte (Greenquantum)"
   time: "Jan 2024 – Feb 2024"
   title: "Analyst Intern"
   subtitle: "Environmental performance scoring; ESG risk indicators"
   category: "intern"
-  row: 3
+  row: 4
 
 - place: "Polytechnic University of Milan"
   time: "Sept 2022 – Oct 2023"
   title: "M.Sc. in Urban Planning and Policy Design"
   subtitle: "Thesis: Low-Carbon Village Planning Principles and Practice | GPA 106/110"
   category: "school"
-  row: 4
+  row: 5
 
 - place: "Sun Yat-sen University"
   time: "Sept 2017 – June 2021"

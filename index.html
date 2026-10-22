@@ -435,6 +435,28 @@ title: Home
   display: block !important;
   max-width: 1040px !important;
 }
+#resume .vitae-column-headings {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: 84px;
+  width: 100%;
+  max-width: 1040px;
+  margin: 30px auto -14px;
+  box-sizing: border-box;
+}
+#resume .vitae-column-heading {
+  margin: 0;
+  color: #33006f;
+  font-size: 1.15em;
+  font-weight: 600;
+  line-height: 1.35;
+}
+#resume .vitae-column-heading.education-heading {
+  text-align: right;
+}
+#resume .vitae-column-heading.professional-heading {
+  text-align: left;
+}
 #resume .timeline.shared-timeline.timeline-paired::before {
   display: block !important;
   left: 50% !important;
@@ -495,6 +517,9 @@ title: Home
   margin-top: 5px !important;
 }
 @media screen and (max-width: 700px) {
+  #resume .vitae-column-headings {
+    display: none !important;
+  }
   #resume .timeline.shared-timeline.timeline-paired {
     padding-left: 30px !important;
   }
@@ -620,6 +645,11 @@ title: Home
 <!-- ========== RESUME ========== -->
 <div class="docs-section" id="resume">
   <h4>Vitæ</h4>
+
+  <div class="vitae-column-headings" aria-hidden="true">
+    <h5 class="vitae-column-heading education-heading">Education</h5>
+    <h5 class="vitae-column-heading professional-heading">Professional Experience</h5>
+  </div>
 
   <ul class="timeline shared-timeline timeline-paired" aria-label="Education and professional experience timeline">
     {% assign timeline_rows = site.data.experience.experiences | group_by: "row" %}
