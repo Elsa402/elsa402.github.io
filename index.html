@@ -429,30 +429,110 @@ title: Home
 }
 </style>
 
+<style>
+/* Paired Vitae rows: education and professional experience may share one row. */
+#resume .timeline.shared-timeline.timeline-paired {
+  display: block !important;
+  max-width: 1040px !important;
+}
+#resume .timeline.shared-timeline.timeline-paired::before {
+  display: block !important;
+  left: 50% !important;
+}
+#resume .timeline.shared-timeline.timeline-paired .timeline-row,
+#resume .timeline.shared-timeline.timeline-paired .timeline-row:nth-child(even) {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  column-gap: 84px !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 0 28px !important;
+}
+#resume .timeline.shared-timeline.timeline-paired .timeline-row::before,
+#resume .timeline.shared-timeline.timeline-paired .timeline-row:nth-child(even)::before {
+  top: 18px !important;
+  left: 50% !important;
+}
+#resume .timeline-paired .timeline-slot {
+  min-width: 0 !important;
+}
+#resume .timeline-paired .timeline-slot:empty {
+  min-height: 22px !important;
+}
+#resume .timeline-paired .timeline-slot .timeline-card {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+#resume .timeline-paired .side-left {
+  grid-column: 1 !important;
+  text-align: right !important;
+}
+#resume .timeline-paired .side-right {
+  grid-column: 2 !important;
+  text-align: left !important;
+}
+#resume .timeline-paired .side-left .timeline-card,
+#resume .timeline-paired .side-left .flag-wrapper,
+#resume .timeline-paired .side-left .flag,
+#resume .timeline-paired .side-left .time-wrapper,
+#resume .timeline-paired .side-left .desc {
+  text-align: right !important;
+}
+#resume .timeline-paired .side-right .timeline-card,
+#resume .timeline-paired .side-right .flag-wrapper,
+#resume .timeline-paired .side-right .flag,
+#resume .timeline-paired .side-right .time-wrapper,
+#resume .timeline-paired .side-right .desc {
+  text-align: left !important;
+}
+#resume .timeline-paired .timeline-slot .flag-wrapper {
+  display: block !important;
+}
+#resume .timeline-paired .timeline-slot .time-wrapper {
+  margin-top: 5px !important;
+}
+@media screen and (max-width: 700px) {
+  #resume .timeline.shared-timeline.timeline-paired {
+    padding-left: 30px !important;
+  }
+  #resume .timeline.shared-timeline.timeline-paired::before {
+    left: 9px !important;
+  }
+  #resume .timeline.shared-timeline.timeline-paired .timeline-row,
+  #resume .timeline.shared-timeline.timeline-paired .timeline-row:nth-child(even) {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    padding-bottom: 22px !important;
+  }
+  #resume .timeline.shared-timeline.timeline-paired .timeline-row::before,
+  #resume .timeline.shared-timeline.timeline-paired .timeline-row:nth-child(even)::before {
+    left: 9px !important;
+  }
+  #resume .timeline-paired .timeline-slot:empty {
+    display: none !important;
+  }
+  #resume .timeline-paired .side-left,
+  #resume .timeline-paired .side-right,
+  #resume .timeline-paired .side-left .timeline-card,
+  #resume .timeline-paired .side-left .flag-wrapper,
+  #resume .timeline-paired .side-left .flag,
+  #resume .timeline-paired .side-left .time-wrapper,
+  #resume .timeline-paired .side-left .desc {
+    text-align: left !important;
+  }
+}
+</style>
+
 <!-- ========== BIO ========== -->
 <div class="docs-section" id="bio">
   <h4>Bio</h4>
   
   <p>
-  I am <b>Shasha Tian</b>, an urban planner and researcher based in Shanghai. 
-  My work centers on <b>sustainable human settlement</b>, <b>urban resilience and adaptation to climate change</b>, and the application of <b>geo-spatial data management</b> and <b>natural language processing (NLP)</b> in urban studies. 
-  I am especially interested in bridging technical tools with planning practice to support decision-making for low-carbon and climate-resilient cities.
-  </p>
-
-  <p>
-  I hold a <b>double Master’s degree in Urban Planning</b> from Tongji University and the Polytechnic University of Milan. 
-  My master’s thesis examined <i>low-carbon village construction</i>, integrating fieldwork and comparative case studies to identify enablers and barriers for clean energy adoption. 
-  Before that, I earned my <b>B.Sc. in Human Geography and Urban-Rural Planning</b> from Sun Yat-sen University, where I conducted research on forest fire risks under climate change using GIS and advanced regression analysis.
-  </p>
-
-  <p>
-  My research experience includes work at <b>Tongji University</b>, <b>Sun Yat-sen University</b>, and the <b>Shanghai Planning and Design Institute</b>, where I combined planning methods with AI-enhanced analysis. 
-  I have also gained industry experience through internships at Deloitte, Industrial Bank, and East China Architectural Design Institute, focusing on <b>carbon finance</b>, <b>ESG risk management</b>, and <b>urban economics</b>. 
-  One of my early publications analyzed industrial carbon emissions in Guangdong Province and their transfer under industrial relocation policies (<i>Geographical Research</i>, 2021).
-  </p>
-
-  <p>
-  Across my academic and professional journey, I aim to integrate <b>planning, data science, and sustainability</b> to tackle the challenges of climate adaptation, equitable urban transformation, and the design of resilient socio-technical systems.
+    Shasha Tian’s recent work uses large-scale mobility and user-generated data to examine how spatial structures and human mobility jointly shape <b>unequal</b> access to opportunities and environmental exposure. Her earlier research training on <b>environment and transportation</b> first developed the statistical and spatial-analytical foundations that now underlie her AI-enabled, data-driven approach.
   </p>
 </div>
 
@@ -541,15 +621,34 @@ title: Home
 <div class="docs-section" id="resume">
   <h4>Vitæ</h4>
 
-  <ul class="timeline shared-timeline" aria-label="Education and professional experience timeline">
-    {% for exp in site.data.experience.experiences %}
-    <li class="{% if exp.category == 'school' %}side-left{% else %}side-right{% endif %}">
-      <div class="timeline-card">
-        <div class="flag-wrapper">
-          <span class="flag">{{ exp.place }}</span>
-          <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+  <ul class="timeline shared-timeline timeline-paired" aria-label="Education and professional experience timeline">
+    {% assign timeline_rows = site.data.experience.experiences | group_by: "row" %}
+    {% for timeline_row in timeline_rows %}
+    <li class="timeline-row">
+      <div class="timeline-slot side-left">
+        {% assign education_items = timeline_row.items | where: "category", "school" %}
+        {% for exp in education_items %}
+        <div class="timeline-card">
+          <div class="flag-wrapper">
+            <span class="flag">{{ exp.place }}</span>
+            <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+          </div>
+          <div class="desc"><b>{{ exp.title }}</b><br/>{{ exp.subtitle }}</div>
         </div>
-        <div class="desc"><b>{{ exp.title }}</b><br/>{{ exp.subtitle }}</div>
+        {% endfor %}
+      </div>
+      <div class="timeline-slot side-right">
+        {% for exp in timeline_row.items %}
+        {% unless exp.category == "school" %}
+        <div class="timeline-card">
+          <div class="flag-wrapper">
+            <span class="flag">{{ exp.place }}</span>
+            <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
+          </div>
+          <div class="desc"><b>{{ exp.title }}</b><br/>{{ exp.subtitle }}</div>
+        </div>
+        {% endunless %}
+        {% endfor %}
       </div>
     </li>
     {% endfor %}
