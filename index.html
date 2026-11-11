@@ -697,7 +697,8 @@ title: Home
       <img class="picture-card-image" src="{{ picture.image | prepend: site.baseurl }}" alt="{{ picture.alt | default: picture.activity }}" loading="lazy" decoding="async">
       <div class="picture-card-content">
         <p class="picture-card-meta">
-          {{ picture.date }}{% if picture.location %}, {{ picture.location }}{% endif %}
+          <span class="picture-card-date">{{ picture.date }}</span>
+          {% if picture.location %}<span class="picture-card-location">{{ picture.location }}</span>{% endif %}
         </p>
         <p class="picture-card-title">
           {% if picture.url %}
