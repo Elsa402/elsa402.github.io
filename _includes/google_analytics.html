@@ -1,10 +1,117 @@
 {% if site.data.main_info.google_analytics_measurement_id %}
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.data.main_info.google_analytics_measurement_id }}"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '{{ site.data.main_info.google_analytics_measurement_id }}');
+  (function () {
+    var measurementId = '{{ site.data.main_info.google_analytics_measurement_id }}';
+    var storageKey = 'shasha_ga_opt_out';
+    var cookieName = 'shasha_ga_opt_out';
+    var params = new URLSearchParams(window.location.search);
+    var analyticsAction = params.get('analytics');
+
+    function setStoredOptOut(disabled) {
+      try {
+        if (disabled) {
+          window.localStorage.setItem(storageKey, 'true');
+        } else {
+          window.localStorage.removeItem(storageKey);
+        }
+      } catch (error) {
+        // Cookies below provide a fallback when localStorage is unavailable.
+      }
+
+      if (disabled) {
+        document.cookie = cookieName + '=true; Max-Age=315360000; Path=/; SameSite=Lax; Secure';
+      } else {
+        document.cookie = cookieName + '=; Max-Age=0; Path=/; SameSite=Lax; Secure';
+      }
+    }
+
+    function hasStoredOptOut() {
+      var localStorageOptOut = false;
+      try {
+        localStorageOptOut = window.localStorage.getItem(storageKey) === 'true';
+      } catch (error) {
+        // Fall back to the first-party cookie.
+      }
+
+      var cookieOptOut = document.cookie.split(';').some(function (cookie) {
+        return cookie.trim() === cookieName + '=true';
+      });
+      return localStorageOptOut || cookieOptOut;
+    }
+
+    function showAnalyticsNotice(message) {
+      function displayNotice() {
+        var notice = document.createElement('div');
+        notice.setAttribute('role', 'status');
+        notice.textContent = message;
+        notice.style.cssText = [
+          'position:fixed',
+          'right:18px',
+          'bottom:18px',
+          'z-index:9999',
+          'max-width:calc(100vw - 36px)',
+          'padding:11px 15px',
+          'border-radius:7px',
+          'background:#33006f',
+          'color:#fff',
+          'font:600 14px/1.4 sans-serif',
+          'box-shadow:0 4px 16px rgba(0,0,0,.2)'
+        ].join(';');
+        document.body.appendChild(notice);
+        window.setTimeout(function () {
+          notice.remove();
+        }, 5000);
+      }
+
+      if (document.body) {
+        displayNotice();
+      } else {
+        document.addEventListener('DOMContentLoaded', displayNotice, { once: true });
+      }
+    }
+
+    if (analyticsAction === 'off') {
+      setStoredOptOut(true);
+    } else if (analyticsAction === 'on') {
+      setStoredOptOut(false);
+    }
+
+    var analyticsDisabled = hasStoredOptOut();
+    window['ga-disable-' + measurementId] = analyticsDisabled;
+
+    if (analyticsAction === 'off') {
+      showAnalyticsNotice('Analytics disabled on this browser.');
+    } else if (analyticsAction === 'on') {
+      showAnalyticsNotice('Analytics enabled on this browser.');
+    } else if (analyticsAction === 'status') {
+      showAnalyticsNotice(
+        analyticsDisabled
+          ? 'Analytics is disabled on this browser.'
+          : 'Analytics is enabled on this browser.'
+      );
+    }
+
+    if (analyticsAction) {
+      var cleanUrl = new URL(window.location.href);
+      cleanUrl.searchParams.delete('analytics');
+      window.history.replaceState({}, document.title, cleanUrl.pathname + cleanUrl.search + cleanUrl.hash);
+    }
+
+    if (analyticsDisabled) {
+      return;
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () {
+      window.dataLayer.push(arguments);
+    };
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId);
+
+    var googleTag = document.createElement('script');
+    googleTag.async = true;
+    googleTag.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
+    document.head.appendChild(googleTag);
+  }());
 </script>
 {% endif %}
