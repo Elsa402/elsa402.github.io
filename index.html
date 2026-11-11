@@ -702,7 +702,7 @@ title: Home
         </p>
         <p class="picture-card-title">
           {% if picture.url %}
-          <a href="{{ picture.url }}" target="_blank" rel="noopener noreferrer">{{ picture.activity }}<i class="fa-solid fa-arrow-up-right-from-square picture-external-link-icon" aria-hidden="true"></i></a>
+          <a href="{{ picture.url }}" target="_blank" rel="noopener noreferrer">{{ picture.activity }}&nbsp;<span class="picture-external-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14 4h6v6M20 4 10 14M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></span></a>
           {% else %}
           {{ picture.activity }}
           {% endif %}

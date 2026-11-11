@@ -223,9 +223,20 @@ h4 {
   text-decoration: underline;
 }
 .picture-external-link-icon {
-  margin-left: 0.45em;
-  font-size: 0.72em;
-  vertical-align: 0.08em;
+  display: inline-block;
+  width: 0.72em;
+  height: 0.72em;
+  vertical-align: 0.02em;
+}
+.picture-external-link-icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .picture-empty-state {
   margin: 24px 0 0;
