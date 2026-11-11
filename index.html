@@ -685,6 +685,36 @@ title: Home
   </ul>
 </div>
 
+<!-- ========== PICTURES ========== -->
+<div class="docs-section" id="pictures">
+  <h4>Pictures</h4>
+
+  {% assign visible_pictures = site.data.pictures.pictures | where: "visible", true %}
+  {% if visible_pictures.size > 0 %}
+  <div class="picture-grid">
+    {% for picture in visible_pictures %}
+    <article class="picture-card">
+      <img class="picture-card-image" src="{{ picture.image | prepend: site.baseurl }}" alt="{{ picture.alt | default: picture.activity }}" loading="lazy" decoding="async">
+      <div class="picture-card-content">
+        <p class="picture-card-meta">
+          {{ picture.date }}{% if picture.location %}, {{ picture.location }}{% endif %}
+        </p>
+        <p class="picture-card-title">
+          {% if picture.url %}
+          <a href="{{ picture.url }}" target="_blank" rel="noopener noreferrer">{{ picture.activity }}</a>
+          {% else %}
+          {{ picture.activity }}
+          {% endif %}
+        </p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="picture-empty-state">Photos will be added soon.</p>
+  {% endif %}
+</div>
+
 <!-- ========== TEMPLATE ACKNOWLEDGEMENT ========== -->
 <div class="docs-section template-acknowledgement" id="template">
   <h4>Acknowledgement</h4>
