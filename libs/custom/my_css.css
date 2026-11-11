@@ -222,6 +222,11 @@ h4 {
   color: #33006f;
   text-decoration: underline;
 }
+.picture-external-link-icon {
+  margin-left: 0.45em;
+  font-size: 0.72em;
+  vertical-align: 0.08em;
+}
 .picture-empty-state {
   margin: 24px 0 0;
   padding: 24px;

@@ -702,7 +702,7 @@ title: Home
         </p>
         <p class="picture-card-title">
           {% if picture.url %}
-          <a href="{{ picture.url }}" target="_blank" rel="noopener noreferrer">{{ picture.activity }}</a>
+          <a href="{{ picture.url }}" target="_blank" rel="noopener noreferrer">{{ picture.activity }}<i class="fa-solid fa-arrow-up-right-from-square picture-external-link-icon" aria-hidden="true"></i></a>
           {% else %}
           {{ picture.activity }}
           {% endif %}
