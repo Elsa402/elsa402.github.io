@@ -1,5 +1,5 @@
 ---
-title: "Decision Making Factors of Travelers of Coach and Highway"
+title: "Decision Making Factors of Travelers of Coach and High-speed Rail"
 thumbnail: /assets/img/coach-highway-travelers-thumb.jpg
 layout: project
 permalink: /projects/coach-highway-travelers/
