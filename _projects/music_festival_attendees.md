@@ -5,7 +5,7 @@ layout: project
 permalink: /projects/music-festival-attendees/
 selected: y
 category: cultural-tourism-research
-order: 1
+order: 2
 materials: true
 coverage_url: "https://mp.weixin.qq.com/s/1VFvWLqlnJmQpcq7F9OYXA"
 output_types:

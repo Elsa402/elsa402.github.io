@@ -6,7 +6,7 @@ layout: project
 permalink: /projects/dining-segregation/
 selected: y
 category: transportation-planning
-order: 3
+order: 1
 output_types:
   - Paper
 year: "Ongoing"

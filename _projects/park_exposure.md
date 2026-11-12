@@ -6,7 +6,7 @@ layout: project
 permalink: /projects/park-exposure/
 selected: y
 category: transportation-planning
-order: 4
+order: 2
 output_types:
   - Paper
 year: "Ongoing"

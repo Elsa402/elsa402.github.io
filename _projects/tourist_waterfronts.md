@@ -5,7 +5,7 @@ layout: project
 permalink: /projects/tourist-waterfronts/
 selected: y
 category: cultural-tourism-research
-order: 2
+order: 1
 materials: true
 coverage_url: "https://mp.weixin.qq.com/s/1VFvWLqlnJmQpcq7F9OYXA"
 output_types:

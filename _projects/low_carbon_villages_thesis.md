@@ -6,7 +6,7 @@ layout: project
 permalink: /projects/low-carbon-villages-thesis/
 selected: y
 category: environmental-sustainability
-order: 3
+order: 2
 materials_url: "/assets/research/low-carbon-villages-thesis.pdf"
 output_types:
   - Thesis

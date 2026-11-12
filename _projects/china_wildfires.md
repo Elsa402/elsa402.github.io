@@ -5,7 +5,7 @@ layout: project
 permalink: /projects/china-wildfires/
 selected: y
 category: environmental-sustainability
-order: 1
+order: 3
 materials: true
 coverage_url: "https://mp.weixin.qq.com/s/BMUl6pZOaw587VJDXbrYiQ"
 output_types:

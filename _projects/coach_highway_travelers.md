@@ -1,11 +1,12 @@
 ---
 title: "Decision Making Factors of Travelers of Coach and High-speed Rail"
-thumbnail: /assets/img/coach-highway-travelers-thumb.jpg
+thumbnail: /assets/img/HSR_3-optimized.jpg
+thumbnail_fit: contain
 layout: project
 permalink: /projects/coach-highway-travelers/
 selected: y
 category: transportation-planning
-order: 1
+order: 3
 materials_url: "https://github.com/Elsa402/elsa402.github.io/tree/master/assets/research/coach-vs-hsr"
 output_types:
   - Coursework

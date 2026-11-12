@@ -6,7 +6,7 @@ layout: project
 permalink: /projects/carbon-emissions/
 selected: y
 category: environmental-sustainability
-order: 2
+order: 1
 materials_url: "https://www.dlyj.ac.cn/EN/abstract/abstract50345.shtml"
 authors: "Shaojian Wang* (Supervisor), <b>Shasha Tian</b>, et al."
 output_types:

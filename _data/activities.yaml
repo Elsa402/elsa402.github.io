@@ -1,12 +1,12 @@
 # Upload activity photos to /assets/pictures/ and add one record for each photo below.
 # Use a project URL or a full external URL. Set visible to true only after the image exists.
 activities:
-  - image: "/assets/pictures/Volunteer Teaching in Rural Areas.jpg"
-    date: "August 2019"
-    location: "Zhanjiang, Guangdong, China"
-    activity: "Volunteer Teaching in Rural Areas"
-    url: "https://mp.weixin.qq.com/s/ME3WggzyDXNfTtGH8RstkQ"
-    alt: "Volunteer Teaching in Rural Areas"
+  - image: "/assets/pictures/fuxing-island-conference.jpg"
+    date: "October 2025"
+    location: "Jiaxing, Zhejiang, China"
+    activity: "Theatrical Conference Presentation: A Future Living Experiment on Fuxing Island"
+    url: "https://mp.weixin.qq.com/s/-yX1rsZCkRfZz-dVbe9m5w"
+    alt: "Theatrical conference presentation on a future living experiment on Fuxing Island"
     visible: true
 
   - image: "/assets/pictures/best-debater.jpg"
@@ -15,4 +15,12 @@ activities:
     activity: "Best Debater: Debate on 'Does the Metaverse Make Humans Healthier?'"
     url: "https://mp.weixin.qq.com/s/XthKz5j_fye-3OvmIcfYBQ"
     alt: "Best Debater: Debate on 'Does the Metaverse Make Humans Healthier?'"
+    visible: true
+
+  - image: "/assets/pictures/Volunteer Teaching in Rural Areas.jpg"
+    date: "August 2019"
+    location: "Zhanjiang, Guangdong, China"
+    activity: "Volunteer Teaching in Rural Areas"
+    url: "https://mp.weixin.qq.com/s/ME3WggzyDXNfTtGH8RstkQ"
+    alt: "Volunteer Teaching in Rural Areas"
     visible: true

@@ -589,7 +589,7 @@ title: Home
     <section class="research-framework-column framework-applications">
       <h5>Applications</h5>
       <div class="research-framework-list">
-        <div class="research-framework-card"><strong>Mobility and Urban Equity</strong><span aria-hidden="true">&nbsp;</span></div>
+        <div class="research-framework-card"><strong>Travel Behavior and Urban Equity</strong><span aria-hidden="true">&nbsp;</span></div>
         <div class="research-framework-card"><strong>Environmental Sustainability</strong><span aria-hidden="true">&nbsp;</span></div>
         <div class="research-framework-card"><strong>Urban AI and Digital Applications</strong><span aria-hidden="true">&nbsp;</span></div>
       </div>
@@ -691,19 +691,26 @@ title: Home
   <div class="picture-grid">
     {% for picture in visible_activities %}
     <article class="picture-card">
-      <img class="picture-card-image" src="{{ picture.image | prepend: site.baseurl }}" alt="{{ picture.alt | default: picture.activity }}" loading="lazy" decoding="async">
+      <div class="picture-card-image-wrap{% if picture.url %} has-coverage{% endif %}">
+        <img class="picture-card-image" src="{{ picture.image | prepend: site.baseurl }}" alt="{{ picture.alt | default: picture.activity }}" loading="lazy" decoding="async">
+        {% if picture.url %}
+        <div class="activity-coverage-overlay">
+          <a class="project-resource-link activity-coverage-link" href="{{ picture.url }}" target="_blank" rel="noopener noreferrer" aria-label="View media coverage for {{ picture.activity }}" title="Media Coverage">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M4 11.25v2.5h3.25L16.5 18V7L7.25 11.25zM7.25 13.75l1.5 5h3"/>
+              <path d="M19 9.25c.75.75 1.15 1.65 1.15 2.75S19.75 14 19 14.75"/>
+            </svg>
+            <span class="u-visually-hidden">Media Coverage</span>
+          </a>
+        </div>
+        {% endif %}
+      </div>
       <div class="picture-card-content">
         <p class="picture-card-meta">
           <span class="picture-card-date">{{ picture.date }}</span>
           {% if picture.location %}<span class="picture-card-location">{{ picture.location }}</span>{% endif %}
         </p>
-        <p class="picture-card-title">
-          {% if picture.url %}
-          <a href="{{ picture.url }}" target="_blank" rel="noopener noreferrer">{{ picture.activity }}&nbsp;<span class="picture-external-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14 4h6v6M20 4 10 14M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"/></svg></span></a>
-          {% else %}
-          {{ picture.activity }}
-          {% endif %}
-        </p>
+        <p class="picture-card-title">{{ picture.activity }}</p>
       </div>
     </article>
     {% endfor %}
