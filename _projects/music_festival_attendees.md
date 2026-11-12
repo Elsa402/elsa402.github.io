@@ -5,6 +5,8 @@ layout: project
 permalink: /projects/music-festival-attendees/
 selected: y
 category: cultural-tourism-research
+output_types:
+  - Presentation
 ---
 
 ### 1. Background & Research Questions

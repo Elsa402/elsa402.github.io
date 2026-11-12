@@ -5,6 +5,9 @@ layout: project
 permalink: /projects/china-wildfires/
 selected: y
 category: environmental-sustainability
+output_types:
+  - Presentation
+  - Award
 ---
 
 ### 1. Research Questions & Background

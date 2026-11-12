@@ -561,85 +561,132 @@ title: Home
   </p>
 </div>
 
-<!-- ========== PUBLICATIONS ========== -->
-<div class="docs-section" id="publications">
-  <h4>Publications</h4>
+<!-- ========== RESEARCH ========== -->
+<div class="docs-section research-section" id="research">
+  <h4>Research</h4>
 
-  <p class="publication-note">* indicates supervisor.</p>
-
-  <article class="publication-entry">
-    <h5>Driving Factors and Carbon Transfer of Industrial Carbon Emissions in Guangdong Province under the Background of Industrial Transfer</h5>
-    <p class="publication-authors">Shaojian Wang*, <strong>Shasha Tian</strong>, et al.</p>
-    <p class="publication-venue"><em>Geographical Research</em> 40, no. 09 (2021): 2606–2622. [In Chinese, CSSCI].</p>
-    <a class="button publication-paper-link" href="https://www.dlyj.ac.cn/EN/abstract/abstract50345.shtml" target="_blank" rel="noopener noreferrer">Paper</a>
-  </article>
-</div>
-
-<!-- ========== PROJECTS ========== -->
-<div class="docs-section" id="projects">
-  <h4>Projects</h4>
-
-  <ul class="tab-nav project-tab-nav" role="tablist" aria-label="Project research areas">
-    <li><a class="button active" data-ref="#projects-cultural" href="#projects-cultural">Cultural and Tourism Research</a></li>
-    <li><a class="button" data-ref="#projects-transportation" href="#projects-transportation">Transportation Planning</a></li>
-    <li><a class="button" data-ref="#projects-environment" href="#projects-environment">Environmental Sustainability</a></li>
-  </ul>
-
-  <div class="tab-content project-tab-content">
-    <div class="tab-pane active" id="projects-cultural">
-      <div class="project-grid">
-        {% assign cultural_projects = site.projects | where: "category", "cultural-tourism-research" %}
-        {% for project in cultural_projects %}
-        <article class="project-container">
-          <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
-            <div class="project-image-container">
-              <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}" loading="lazy" decoding="async">
-            </div>
-            <div class="project-caption">
-              <strong>{{ project.title }}</strong>
-            </div>
-          </a>
-        </article>
-        {% endfor %}
+  <div class="research-framework" aria-label="Research data, methods, and applications">
+    <section class="research-framework-column framework-data">
+      <h5>Data Types</h5>
+      <div class="research-framework-list">
+        <div class="research-framework-card"><strong>Textual Data</strong><span aria-hidden="true">&nbsp;</span></div>
+        <div class="research-framework-card"><strong>Morphological Data</strong><span aria-hidden="true">&nbsp;</span></div>
+        <div class="research-framework-card"><strong>Spatiotemporal Data</strong><span aria-hidden="true">&nbsp;</span></div>
+        <div class="research-framework-card"><strong>Socioeconomic Statistics</strong><span aria-hidden="true">&nbsp;</span></div>
       </div>
-    </div>
+    </section>
 
-    <div class="tab-pane" id="projects-transportation">
-      <div class="project-grid">
-        {% assign transportation_projects = site.projects | where: "category", "transportation-planning" %}
-        {% for project in transportation_projects %}
-        <article class="project-container">
-          <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
-            <div class="project-image-container">
-              <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}" loading="lazy" decoding="async">
-            </div>
-            <div class="project-caption">
-              <strong>{{ project.title }}</strong>
-            </div>
-          </a>
-        </article>
-        {% endfor %}
+    <section class="research-framework-column framework-methods">
+      <h5>Methods</h5>
+      <div class="research-framework-list">
+        <div class="research-framework-card"><strong>Spatiotemporal Data Mining</strong><span aria-hidden="true">&nbsp;</span></div>
+        <div class="research-framework-card"><strong>Artificial Intelligence</strong><span aria-hidden="true">&nbsp;</span></div>
+        <div class="research-framework-card"><strong>Advanced Statistics</strong><span aria-hidden="true">&nbsp;</span></div>
+        <div class="research-framework-card"><strong>Data Visualization</strong><span aria-hidden="true">&nbsp;</span></div>
       </div>
-    </div>
+    </section>
 
-    <div class="tab-pane" id="projects-environment">
-      <div class="project-grid">
-        {% assign environmental_projects = site.projects | where: "category", "environmental-sustainability" %}
-        {% for project in environmental_projects %}
-        <article class="project-container">
-          <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
-            <div class="project-image-container">
-              <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}" loading="lazy" decoding="async">
-            </div>
-            <div class="project-caption">
-              <strong>{{ project.title }}</strong>
-            </div>
-          </a>
-        </article>
-        {% endfor %}
+    <section class="research-framework-column framework-applications">
+      <h5>Applications</h5>
+      <div class="research-framework-list">
+        <div class="research-framework-card"><strong>Mobility and Urban Equity</strong><span aria-hidden="true">&nbsp;</span></div>
+        <div class="research-framework-card"><strong>Environmental Sustainability</strong><span aria-hidden="true">&nbsp;</span></div>
+        <div class="research-framework-card"><strong>Urban AI and Digital Applications</strong><span aria-hidden="true">&nbsp;</span></div>
       </div>
-    </div>
+    </section>
   </div>
+
+  <div class="research-output-legend" aria-label="Research output types">
+    <span class="research-output-label">Paper</span>
+    <span class="research-output-label">Thesis</span>
+    <span class="research-output-label">Presentation</span>
+    <span class="research-output-label">Funded</span>
+    <span class="research-output-label">Award</span>
+    <span class="research-output-label">Coursework</span>
+  </div>
+
+  <section class="research-theme" id="travel-behavior-urban-equity">
+    <h5><span>01 /</span> Travel Behavior and Urban Equity</h5>
+    <div class="project-grid">
+      {% assign transportation_projects = site.projects | where: "category", "transportation-planning" %}
+      {% for project in transportation_projects %}
+      <article class="project-container">
+        <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
+          <div class="project-image-container">
+            <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}" loading="lazy" decoding="async">
+          </div>
+          <div class="project-caption"><strong>{{ project.title }}</strong></div>
+        </a>
+        {% if project.output_types %}
+        <div class="project-output-labels" aria-label="Research output types">
+          {% for output_type in project.output_types %}<span class="research-output-label">{{ output_type }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="research-theme" id="environmental-sustainability">
+    <h5><span>02 /</span> Environmental Sustainability</h5>
+    <div class="project-grid">
+      {% assign environmental_projects = site.projects | where: "category", "environmental-sustainability" %}
+      {% for project in environmental_projects %}
+      <article class="project-container">
+        <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
+          <div class="project-image-container">
+            <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}" loading="lazy" decoding="async">
+          </div>
+          <div class="project-caption"><strong>{{ project.title }}</strong></div>
+        </a>
+        {% if project.output_types %}
+        <div class="project-output-labels" aria-label="Research output types">
+          {% for output_type in project.output_types %}<span class="research-output-label">{{ output_type }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+
+      <article class="project-container publication-project-card">
+        <a class="project-card-link" href="https://www.dlyj.ac.cn/EN/abstract/abstract50345.shtml" target="_blank" rel="noopener noreferrer">
+          <div class="project-image-container publication-card-cover">
+            <span class="publication-card-journal">Geographical Research</span>
+            <span class="publication-card-year">2021 · CSSCI</span>
+          </div>
+          <div class="project-caption">
+            <strong>Driving Factors and Carbon Transfer of Industrial Carbon Emissions in Guangdong Province under the Background of Industrial Transfer</strong>
+            <span>Shaojian Wang*, <b>Shasha Tian</b>, et al.</span>
+          </div>
+        </a>
+        <div class="project-output-labels" aria-label="Research output types">
+          <span class="research-output-label">Paper</span>
+        </div>
+      </article>
+    </div>
+    <p class="research-supervisor-note">* indicates supervisor.</p>
+  </section>
+
+  <section class="research-theme" id="urban-ai-digital-applications">
+    <h5><span>03 /</span> Urban AI and Digital Applications</h5>
+    <div class="project-grid">
+      {% assign cultural_projects = site.projects | where: "category", "cultural-tourism-research" %}
+      {% for project in cultural_projects %}
+      <article class="project-container">
+        <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
+          <div class="project-image-container">
+            <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}" loading="lazy" decoding="async">
+          </div>
+          <div class="project-caption"><strong>{{ project.title }}</strong></div>
+        </a>
+        {% if project.output_types %}
+        <div class="project-output-labels" aria-label="Research output types">
+          {% for output_type in project.output_types %}<span class="research-output-label">{{ output_type }}</span>{% endfor %}
+        </div>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </section>
 </div>
 
 <!-- ========== RESUME ========== -->

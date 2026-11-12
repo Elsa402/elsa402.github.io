@@ -54,35 +54,118 @@ h4 {
 .image {
   text-align: center; }
 
-/*  ================ Publication styling  ================ */
-.publication-note {
-  margin-bottom: 28px;
-  color: #555;
+/*  ================ Research styling  ================ */
+.research-framework {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin: 30px 0 34px;
 }
-.publication-entry h5 {
-  margin-bottom: 8px;
+.research-framework-column h5 {
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid currentColor;
   font-family: "Raleway", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 24px;
-}
-.publication-authors,
-.publication-venue {
-  margin-bottom: 8px;
-  font-size: 15px;
-  line-height: 24px;
-}
-.publication-paper-link {
-  margin-top: 8px;
-  min-width: 112px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .16rem;
   text-align: center;
-  text-transform: none;
+  text-transform: uppercase;
+}
+.research-framework-list {
+  display: grid;
+  gap: 10px;
+}
+.research-framework-card {
+  min-height: 72px;
+  padding: 14px 10px 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .06);
+}
+.research-framework-card strong,
+.research-framework-card span {
+  display: block;
+}
+.research-framework-card strong {
+  font-size: 13px;
+  line-height: 1.35;
+}
+.research-framework-card span {
+  min-height: 1em;
+  margin-top: 5px;
   font-size: 11px;
-  font-weight: 100;
-  line-height: 25px;
+  line-height: 1;
+}
+.framework-data {
+  color: #486d60;
+}
+.framework-data .research-framework-card {
+  border-color: #c7d8d1;
+  background: #f2f7f5;
+}
+.framework-methods {
+  color: #765b38;
+}
+.framework-methods .research-framework-card {
+  border-color: #ded0be;
+  background: #faf7f3;
+}
+.framework-applications {
+  color: #3f607d;
+}
+.framework-applications .research-framework-card {
+  border-color: #c8d5e1;
+  background: #f3f6f9;
+}
+.research-output-legend {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 42px;
+}
+.research-output-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 7px 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #555;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .04rem;
+  line-height: 1.25;
+  text-align: center;
+}
+.research-theme {
+  padding: 34px 0 10px;
+  border-top: 1px solid #eee;
+}
+.research-theme > h5 {
+  margin: 0 0 24px;
+  color: #222;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.research-theme > h5 span {
+  margin-right: 6px;
+  color: #33006f;
+}
+.research-supervisor-note {
+  margin: -8px 0 18px;
+  color: #666;
+  font-size: 11px;
 }
 
-/*  ================ Project styling  ================ */
+/*  ================ Research project cards  ================ */
 .project-container {
   margin-bottom: 30px;
 }
@@ -99,31 +182,6 @@ h4 {
 }
 .project-caption {
   padding: 3px;
-}
-.project-tab-nav {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-  margin: 24px 0 30px;
-  padding-left: 0;
-}
-.project-tab-nav li {
-  display: flex;
-  margin-bottom: 0;
-}
-.project-tab-nav li .button {
-  height: auto;
-  min-height: 44px;
-  margin: 0 0 -1px;
-  padding: 11px 16px;
-  line-height: 1.35;
-  white-space: normal;
-  text-align: center;
-  text-transform: none;
-  letter-spacing: .03rem;
-}
-.project-tab-content {
-  min-height: 210px;
 }
 .project-grid {
   display: grid;
@@ -157,7 +215,51 @@ h4 {
 .project-card-link .project-caption span {
   margin-top: 5px;
   color: #666;
+  font-size: 12px;
   line-height: 1.45;
+}
+.project-output-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 12px 4px 0;
+}
+.project-output-labels .research-output-label {
+  min-width: 92px;
+  min-height: 34px;
+  padding: 6px 12px;
+}
+.publication-card-cover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  box-sizing: border-box;
+  background:
+    linear-gradient(135deg, rgba(51, 0, 111, .05), rgba(51, 0, 111, .12)),
+    #faf9fc;
+  color: #33006f;
+  text-align: center;
+}
+.publication-card-journal,
+.publication-card-year {
+  display: block;
+}
+.publication-card-journal {
+  max-width: 85%;
+  font-family: "Raleway", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.publication-card-year {
+  margin-top: 10px;
+  color: #655775;
+  font-size: 11px;
+  letter-spacing: .08rem;
+  text-transform: uppercase;
 }
 .project-empty-state {
   margin: 0;
@@ -249,19 +351,11 @@ h4 {
 }
 
 @media (max-width: 700px) {
-  .project-tab-nav {
-    display: block;
-    border-bottom: 0;
+  .research-framework {
+    grid-template-columns: 1fr;
   }
-  .project-tab-nav li,
-  .project-tab-nav li .button {
-    display: block;
-    width: 100%;
-  }
-  .project-tab-nav li .button {
-    margin: 0 0 7px;
-    border-bottom: 1px solid #bbb;
-    border-radius: 4px;
+  .research-output-legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .project-grid {
     grid-template-columns: 1fr;
@@ -272,6 +366,12 @@ h4 {
 }
 
 @media (min-width: 701px) and (max-width: 900px) {
+  .research-framework {
+    gap: 14px;
+  }
+  .research-output-legend {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .picture-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

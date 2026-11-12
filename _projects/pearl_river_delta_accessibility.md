@@ -5,6 +5,8 @@ layout: project
 permalink: /projects/pearl-river-delta-accessibility/
 selected: y
 category: transportation-planning
+output_types:
+  - Funded
 ---
 
 ### 1. Research Questions & Background

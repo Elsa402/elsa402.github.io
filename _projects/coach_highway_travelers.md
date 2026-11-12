@@ -5,6 +5,8 @@ layout: project
 permalink: /projects/coach-highway-travelers/
 selected: y
 category: transportation-planning
+output_types:
+  - Coursework
 ---
 
 ### 1. Research Questions & Background
