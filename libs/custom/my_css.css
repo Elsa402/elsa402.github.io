@@ -124,7 +124,9 @@ h4 {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 10px;
-  margin: 0 0 42px;
+  margin: 0 0 8px;
+  padding-top: 34px;
+  border-top: 1px solid #eee;
 }
 .research-output-label {
   display: inline-flex;
@@ -132,11 +134,11 @@ h4 {
   justify-content: center;
   min-height: 42px;
   padding: 7px 10px;
-  border: 1px solid #bbb;
+  border: 1px solid #33006f;
   border-radius: 6px;
   box-sizing: border-box;
   background: #fff;
-  color: #555;
+  color: #33006f;
   font-size: 11px;
   font-weight: 400;
   letter-spacing: .04rem;
@@ -145,7 +147,6 @@ h4 {
 }
 .research-theme {
   padding: 34px 0 10px;
-  border-top: 1px solid #eee;
 }
 .research-theme > h5 {
   margin: 0 0 24px;
@@ -159,64 +160,112 @@ h4 {
   margin-right: 6px;
   color: #33006f;
 }
-.research-supervisor-note {
-  margin: -8px 0 18px;
-  color: #666;
-  font-size: 11px;
-}
-
 /*  ================ Research project cards  ================ */
 .project-container {
   margin-bottom: 30px;
 }
 .project-image-container {
+  position: relative;
+  overflow: hidden;
   border: 1px solid rgba(0,0,0,0.2);
   padding: 3px;
-  transition: 0.3s;
+  background: #fff;
 }
-.project-image-container:hover {
-  transition: 0.3s;
+.project-image-container img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: opacity .25s ease, filter .25s ease;
 }
-.project-image-container:hover img {
-  opacity: 0.4;
+.project-image-container.project-image-contain img {
+  object-fit: contain;
+  background: #fff;
+}
+.project-image-container.has-resources:hover img,
+.project-image-container.has-resources:focus-within img {
+  opacity: .28;
+  filter: grayscale(.25);
 }
 .project-caption {
-  padding: 3px;
+  padding: 10px 4px 0;
+}
+.project-caption strong,
+.project-caption span {
+  display: block;
+}
+.project-caption strong {
+  color: #222;
+  line-height: 1.4;
+}
+.project-caption span {
+  margin-top: 5px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.45;
 }
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
 }
-.project-card-link {
-  display: block;
-  color: #222;
-  text-decoration: none;
+.project-resource-overlay {
+  position: absolute;
+  inset: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease;
 }
-.project-card-link:hover {
-  color: #33006f;
+.project-image-container:hover .project-resource-overlay,
+.project-image-container:focus-within .project-resource-overlay {
+  opacity: 1;
 }
-.project-card-link .project-image-container img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+.project-resource-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(0,0,0,.24);
+  border-radius: 8px;
+  background: rgba(255,255,255,.94);
+  color: #111;
+  pointer-events: auto;
+  transition: transform .2s ease, box-shadow .2s ease;
 }
-.project-card-link .project-caption {
-  padding: 10px 4px 0;
+.project-resource-link:hover,
+.project-resource-link:focus {
+  color: #111;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,.14);
+  outline: none;
 }
-.project-card-link .project-caption strong,
-.project-card-link .project-caption span {
-  display: block;
+.project-resource-link:focus-visible {
+  box-shadow: 0 0 0 3px rgba(51,0,111,.22);
 }
-.project-card-link .project-caption strong {
-  line-height: 1.4;
+.project-resource-link svg {
+  width: 25px;
+  height: 25px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
-.project-card-link .project-caption span {
-  margin-top: 5px;
-  color: #666;
-  font-size: 12px;
-  line-height: 1.45;
+.u-visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
 }
 .project-output-labels {
   display: flex;
@@ -228,38 +277,6 @@ h4 {
   min-width: 92px;
   min-height: 34px;
   padding: 6px 12px;
-}
-.publication-card-cover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  box-sizing: border-box;
-  background:
-    linear-gradient(135deg, rgba(51, 0, 111, .05), rgba(51, 0, 111, .12)),
-    #faf9fc;
-  color: #33006f;
-  text-align: center;
-}
-.publication-card-journal,
-.publication-card-year {
-  display: block;
-}
-.publication-card-journal {
-  max-width: 85%;
-  font-family: "Raleway", sans-serif;
-  font-size: 19px;
-  font-weight: 600;
-  line-height: 1.35;
-}
-.publication-card-year {
-  margin-top: 10px;
-  color: #655775;
-  font-size: 11px;
-  letter-spacing: .08rem;
-  text-transform: uppercase;
 }
 .project-empty-state {
   margin: 0;
@@ -274,7 +291,7 @@ h4 {
   margin-bottom: 0;
 }
 
-/*  ================ Picture evidence styling  ================ */
+/*  ================ Activity evidence styling  ================ */
 .picture-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -362,6 +379,29 @@ h4 {
   }
   .picture-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (hover: none) {
+  .project-resource-overlay {
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 1;
+  }
+  .project-image-container.has-resources:hover img,
+  .project-image-container.has-resources:focus-within img {
+    opacity: 1;
+    filter: none;
+  }
+  .project-resource-link {
+    width: 42px;
+    height: 42px;
+  }
+  .project-resource-link svg {
+    width: 22px;
+    height: 22px;
   }
 }
 

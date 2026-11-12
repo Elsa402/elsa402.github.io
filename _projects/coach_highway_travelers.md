@@ -5,8 +5,11 @@ layout: project
 permalink: /projects/coach-highway-travelers/
 selected: y
 category: transportation-planning
+order: 1
+materials: true
 output_types:
   - Coursework
+year: "2020"
 ---
 
 ### 1. Research Questions & Background

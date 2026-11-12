@@ -609,20 +609,9 @@ title: Home
     <h5><span>01 /</span> Travel Behavior and Urban Equity</h5>
     <div class="project-grid">
       {% assign transportation_projects = site.projects | where: "category", "transportation-planning" %}
+      {% assign transportation_projects = transportation_projects | sort: "order" %}
       {% for project in transportation_projects %}
-      <article class="project-container">
-        <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
-          <div class="project-image-container">
-            <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}" loading="lazy" decoding="async">
-          </div>
-          <div class="project-caption"><strong>{{ project.title }}</strong></div>
-        </a>
-        {% if project.output_types %}
-        <div class="project-output-labels" aria-label="Research output types">
-          {% for output_type in project.output_types %}<span class="research-output-label">{{ output_type }}</span>{% endfor %}
-        </div>
-        {% endif %}
-      </article>
+      {% include research_card.html project=project %}
       {% endfor %}
     </div>
   </section>
@@ -631,59 +620,20 @@ title: Home
     <h5><span>02 /</span> Environmental Sustainability</h5>
     <div class="project-grid">
       {% assign environmental_projects = site.projects | where: "category", "environmental-sustainability" %}
+      {% assign environmental_projects = environmental_projects | sort: "order" %}
       {% for project in environmental_projects %}
-      <article class="project-container">
-        <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
-          <div class="project-image-container">
-            <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}" loading="lazy" decoding="async">
-          </div>
-          <div class="project-caption"><strong>{{ project.title }}</strong></div>
-        </a>
-        {% if project.output_types %}
-        <div class="project-output-labels" aria-label="Research output types">
-          {% for output_type in project.output_types %}<span class="research-output-label">{{ output_type }}</span>{% endfor %}
-        </div>
-        {% endif %}
-      </article>
+      {% include research_card.html project=project %}
       {% endfor %}
-
-      <article class="project-container publication-project-card">
-        <a class="project-card-link" href="https://www.dlyj.ac.cn/EN/abstract/abstract50345.shtml" target="_blank" rel="noopener noreferrer">
-          <div class="project-image-container publication-card-cover">
-            <span class="publication-card-journal">Geographical Research</span>
-            <span class="publication-card-year">2021 · CSSCI</span>
-          </div>
-          <div class="project-caption">
-            <strong>Driving Factors and Carbon Transfer of Industrial Carbon Emissions in Guangdong Province under the Background of Industrial Transfer</strong>
-            <span>Shaojian Wang*, <b>Shasha Tian</b>, et al.</span>
-          </div>
-        </a>
-        <div class="project-output-labels" aria-label="Research output types">
-          <span class="research-output-label">Paper</span>
-        </div>
-      </article>
     </div>
-    <p class="research-supervisor-note">* indicates supervisor.</p>
   </section>
 
   <section class="research-theme" id="urban-ai-digital-applications">
     <h5><span>03 /</span> Urban AI and Digital Applications</h5>
     <div class="project-grid">
       {% assign cultural_projects = site.projects | where: "category", "cultural-tourism-research" %}
+      {% assign cultural_projects = cultural_projects | sort: "order" %}
       {% for project in cultural_projects %}
-      <article class="project-container">
-        <a class="project-card-link" href="{{ project.url | default: project.permalink }}">
-          <div class="project-image-container">
-            <img src="{{ project.thumbnail }}" class="u-max-full-width" alt="{{ project.title }}" loading="lazy" decoding="async">
-          </div>
-          <div class="project-caption"><strong>{{ project.title }}</strong></div>
-        </a>
-        {% if project.output_types %}
-        <div class="project-output-labels" aria-label="Research output types">
-          {% for output_type in project.output_types %}<span class="research-output-label">{{ output_type }}</span>{% endfor %}
-        </div>
-        {% endif %}
-      </article>
+      {% include research_card.html project=project %}
       {% endfor %}
     </div>
   </section>
@@ -732,14 +682,14 @@ title: Home
   </ul>
 </div>
 
-<!-- ========== PICTURES ========== -->
-<div class="docs-section" id="pictures">
-  <h4>Pictures</h4>
+<!-- ========== ACTIVITIES ========== -->
+<div class="docs-section" id="activities">
+  <h4>Activities</h4>
 
-  {% assign visible_pictures = site.data.pictures.pictures | where: "visible", true %}
-  {% if visible_pictures.size > 0 %}
+  {% assign visible_activities = site.data.activities.activities | where: "visible", true %}
+  {% if visible_activities.size > 0 %}
   <div class="picture-grid">
-    {% for picture in visible_pictures %}
+    {% for picture in visible_activities %}
     <article class="picture-card">
       <img class="picture-card-image" src="{{ picture.image | prepend: site.baseurl }}" alt="{{ picture.alt | default: picture.activity }}" loading="lazy" decoding="async">
       <div class="picture-card-content">
@@ -759,7 +709,7 @@ title: Home
     {% endfor %}
   </div>
   {% else %}
-  <p class="picture-empty-state">Photos will be added soon.</p>
+  <p class="picture-empty-state">Activities will be added soon.</p>
   {% endif %}
 </div>
 

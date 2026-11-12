@@ -5,8 +5,12 @@ layout: project
 permalink: /projects/tourist-waterfronts/
 selected: y
 category: cultural-tourism-research
+order: 2
+materials: true
+coverage_url: "https://mp.weixin.qq.com/s/1VFvWLqlnJmQpcq7F9OYXA"
 output_types:
   - Presentation
+year: "2025"
 ---
 ### 1. Research Questions
 * How do international tourists perceive waterfront spaces, and what are the specific differences in perception between the Huangpu River and the Suzhou River?

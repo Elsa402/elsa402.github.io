@@ -1,0 +1,46 @@
+{% assign project = include.project %}
+{% assign materials_url = project.materials_url %}
+{% if project.materials == true %}
+  {% assign materials_url = project.url | default: project.permalink %}
+{% endif %}
+
+<article class="project-container">
+  <div class="project-image-container{% if project.thumbnail_fit == 'contain' %} project-image-contain{% endif %}{% if materials_url or project.coverage_url %} has-resources{% endif %}">
+    <img src="{{ project.thumbnail | prepend: site.baseurl }}" class="u-max-full-width" alt="{{ project.title }}" loading="lazy" decoding="async">
+    {% if materials_url or project.coverage_url %}
+    <div class="project-resource-overlay" aria-label="Links for {{ project.title }}">
+      {% if materials_url %}
+      <a class="project-resource-link" href="{% if materials_url contains '://' %}{{ materials_url }}{% else %}{{ materials_url | prepend: site.baseurl }}{% endif %}" target="_blank" rel="noopener noreferrer" aria-label="View research materials for {{ project.title }}" title="Research Materials">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6.75 3.5h7.5L19 8.25v12.25H6.75z"/>
+          <path d="M14.25 3.5v4.75H19M9.5 12h6M9.5 15.5h6"/>
+        </svg>
+        <span class="u-visually-hidden">Research Materials</span>
+      </a>
+      {% endif %}
+      {% if project.coverage_url %}
+      <a class="project-resource-link" href="{{ project.coverage_url }}" target="_blank" rel="noopener noreferrer" aria-label="View media coverage for {{ project.title }}" title="Media Coverage">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M4 11.25v2.5h3.25L16.5 18V7L7.25 11.25zM7.25 13.75l1.5 5h3"/>
+          <path d="M19 9.25c.75.75 1.15 1.65 1.15 2.75S19.75 14 19 14.75"/>
+        </svg>
+        <span class="u-visually-hidden">Media Coverage</span>
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="project-caption">
+    <strong>{{ project.title }}</strong>
+    {% if project.authors %}<span>{{ project.authors }}</span>{% endif %}
+  </div>
+
+  {% if project.output_types %}
+  <div class="project-output-labels" aria-label="Research output types">
+    {% for output_type in project.output_types %}
+    <span class="research-output-label">{{ output_type }}{% if forloop.last and project.year %} · {{ project.year }}{% endif %}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+</article>

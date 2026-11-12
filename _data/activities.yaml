@@ -1,0 +1,18 @@
+# Upload activity photos to /assets/pictures/ and add one record for each photo below.
+# Use a project URL or a full external URL. Set visible to true only after the image exists.
+activities:
+  - image: "/assets/pictures/Volunteer Teaching in Rural Areas.jpg"
+    date: "August 2019"
+    location: "Zhanjiang, Guangdong, China"
+    activity: "Volunteer Teaching in Rural Areas"
+    url: "https://mp.weixin.qq.com/s/ME3WggzyDXNfTtGH8RstkQ"
+    alt: "Volunteer Teaching in Rural Areas"
+    visible: true
+
+  - image: "/assets/pictures/best-debater.jpg"
+    date: "January 2022"
+    location: "Shanghai, China"
+    activity: "Best Debater in “元宇宙是否使人类更健康” 辩论赛"
+    url: "https://mp.weixin.qq.com/s/XthKz5j_fye-3OvmIcfYBQ"
+    alt: "Best Debater in a debate on whether the metaverse makes humans healthier"
+    visible: true
