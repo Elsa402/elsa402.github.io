@@ -6,7 +6,7 @@ layout: project
 permalink: /projects/coach-highway-travelers/
 selected: y
 category: transportation-planning
-order: 3
+order: 4
 materials_url: "https://github.com/Elsa402/elsa402.github.io/tree/master/assets/research/coach-vs-hsr"
 output_types:
   - Coursework
