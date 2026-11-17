@@ -24,3 +24,11 @@ activities:
     url: "https://mp.weixin.qq.com/s/ME3WggzyDXNfTtGH8RstkQ"
     alt: "Volunteer Teaching in Rural Areas"
     visible: true
+
+  - image: "/assets/pictures/volunteer-wedding-photography.jpg"
+    date: "May 2019"
+    location: "Guangzhou, Guangdong, China"
+    activity: "Volunteer Wedding Photography for Older Couples"
+    url: "https://mp.weixin.qq.com/s/bpV0NTiDvyhdisZUQJ3CsA"
+    alt: "Volunteer Wedding Photography for Older Couples"
+    visible: true
