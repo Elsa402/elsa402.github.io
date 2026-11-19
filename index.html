@@ -686,11 +686,20 @@ title: Home
 <div class="docs-section" id="activities">
   <h4>Activities</h4>
 
+  <div class="research-output-legend activity-type-legend" aria-label="Activity types">
+    <span class="research-output-label">Public Speaking</span>
+    <span class="research-output-label">Multimedia Storytelling</span>
+    <span class="research-output-label">Community Service</span>
+  </div>
+
   {% assign visible_activities = site.data.activities.activities | where: "visible", true %}
   {% if visible_activities.size > 0 %}
   <div class="picture-grid">
     {% for picture in visible_activities %}
-    <article class="picture-card">
+    <article class="picture-card{% if picture.page_url %} picture-card-linked{% endif %}">
+      {% if picture.page_url %}
+      <a class="picture-card-primary-link" href="{{ picture.page_url | prepend: site.baseurl }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ picture.activity }}"></a>
+      {% endif %}
       <div class="picture-card-image-wrap{% if picture.url %} has-coverage{% endif %}">
         <img class="picture-card-image" src="{{ picture.image | prepend: site.baseurl }}" alt="{{ picture.alt | default: picture.activity }}" loading="lazy" decoding="async">
         {% if picture.url %}
@@ -706,10 +715,10 @@ title: Home
         {% endif %}
       </div>
       <div class="picture-card-content">
-        <p class="picture-card-meta">
-          <span class="picture-card-date">{{ picture.date }}</span>
-          {% if picture.location %}<span class="picture-card-location">{{ picture.location }}</span>{% endif %}
-        </p>
+        <div class="activity-tags" aria-label="Activity type, year, and location">
+          <span class="activity-type-tag">{{ picture.type }}</span>
+          <span class="activity-context-tag">{{ picture.context }}</span>
+        </div>
         <p class="picture-card-title">{{ picture.activity }}</p>
       </div>
     </article>

@@ -2,32 +2,40 @@
 # Use a project URL or a full external URL. Set visible to true only after the image exists.
 activities:
   - image: "/assets/pictures/fuxing-island-conference.jpg"
-    date: "October 2025"
-    location: "Jiaxing, Zhejiang, China"
+    type: "Multimedia Storytelling"
+    context: "2025 / Jiaxing (China)"
     activity: "Theatrical Conference Presentation: A Future Living Experiment on Fuxing Island"
     url: "https://mp.weixin.qq.com/s/-yX1rsZCkRfZz-dVbe9m5w"
     alt: "Theatrical conference presentation on a future living experiment on Fuxing Island"
     visible: true
 
+  - image: "/assets/pictures/nolo-documentary-cover.jpg"
+    type: "Multimedia Storytelling"
+    context: "2023 / Milan (Italy)"
+    activity: "Documentary Filmmaking: Gentrification in Milan's NoLo District"
+    page_url: "/activities/nolo-documentary/"
+    alt: "A street scene from the documentary about gentrification in Milan's NoLo district"
+    visible: true
+
   - image: "/assets/pictures/best-debater.jpg"
-    date: "January 2022"
-    location: "Shanghai, China"
+    type: "Public Speaking"
+    context: "2022 / Shanghai (China)"
     activity: "Best Debater: Debate on 'Does the Metaverse Make Humans Healthier?'"
     url: "https://mp.weixin.qq.com/s/XthKz5j_fye-3OvmIcfYBQ"
     alt: "Best Debater: Debate on 'Does the Metaverse Make Humans Healthier?'"
     visible: true
 
   - image: "/assets/pictures/Volunteer Teaching in Rural Areas.jpg"
-    date: "August 2019"
-    location: "Zhanjiang, Guangdong, China"
+    type: "Community Service"
+    context: "2019 / Zhanjiang (China)"
     activity: "Volunteer Teaching in Rural Areas"
     url: "https://mp.weixin.qq.com/s/ME3WggzyDXNfTtGH8RstkQ"
     alt: "Volunteer Teaching in Rural Areas"
     visible: true
 
   - image: "/assets/pictures/volunteer-wedding-photography.jpg"
-    date: "May 2019"
-    location: "Guangzhou, Guangdong, China"
+    type: "Community Service"
+    context: "2019 / Guangzhou (China)"
     activity: "Volunteer Wedding Photography for Older Couples"
     url: "https://mp.weixin.qq.com/s/bpV0NTiDvyhdisZUQJ3CsA"
     alt: "Volunteer Wedding Photography for Older Couples"
