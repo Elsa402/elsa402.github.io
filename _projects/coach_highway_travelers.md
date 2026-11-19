@@ -11,6 +11,7 @@ materials_url: "https://github.com/Elsa402/elsa402.github.io/tree/master/assets/
 output_types:
   - Coursework
 year: "2020"
+location: "Yangtze River Delta (China)"
 ---
 
 ### 1. Research Questions & Background

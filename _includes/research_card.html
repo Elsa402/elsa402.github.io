@@ -37,10 +37,13 @@
   </div>
 
   {% if project.output_types %}
-  <div class="project-output-labels" aria-label="Research output types">
+  <div class="project-output-labels" aria-label="Research output type, year, and location">
     {% for output_type in project.output_types %}
-    <span class="research-output-label">{{ output_type }}{% if forloop.last and project.year %} · {{ project.year }}{% endif %}</span>
+    <span class="research-output-label project-output-type">{{ output_type }}</span>
     {% endfor %}
+    {% if project.year %}
+    <span class="research-output-label project-output-context">{{ project.year }}{% if project.location %} / {{ project.location }}{% endif %}</span>
+    {% endif %}
   </div>
   {% endif %}
 </article>

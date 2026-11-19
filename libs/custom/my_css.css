@@ -278,6 +278,15 @@ h4 {
   min-height: 34px;
   padding: 6px 12px;
 }
+.project-output-labels .project-output-type {
+  background: #33006f;
+  color: #fff;
+}
+.project-output-labels .project-output-context {
+  min-width: 0;
+  background: #fff;
+  color: #33006f;
+}
 .project-empty-state {
   margin: 0;
   padding: 36px;
@@ -297,6 +306,10 @@ h4 {
   margin: 24px 0 28px;
   padding-top: 0;
   border-top: 0;
+}
+.activity-type-legend .research-output-label {
+  background: #33006f;
+  color: #fff;
 }
 .picture-grid {
   display: grid;

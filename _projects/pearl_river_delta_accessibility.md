@@ -11,6 +11,7 @@ materials: true
 output_types:
   - Funded
 year: "2019"
+location: "Pearl River Delta (China)"
 ---
 
 ### 1. Research Questions & Background

@@ -12,6 +12,7 @@ output_types:
   - Presentation
   - Award
 year: "2019"
+location: "China"
 ---
 
 ### 1. Research Questions & Background

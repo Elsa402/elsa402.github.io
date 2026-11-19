@@ -11,4 +11,5 @@ materials_url: "/assets/research/low-carbon-villages-thesis.pdf"
 output_types:
   - Thesis
 year: "2024"
+location: "Zhejiang (China)"
 ---
