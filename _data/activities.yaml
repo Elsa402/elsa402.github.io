@@ -28,9 +28,9 @@ activities:
   - image: "/assets/pictures/Volunteer Teaching in Rural Areas.jpg"
     type: "Community Service"
     context: "2019 / Zhanjiang (China)"
-    activity: "Volunteer Teaching in Rural Areas"
+    activity: "Volunteer Teaching for Children in Underserved Communities"
     url: "https://mp.weixin.qq.com/s/ME3WggzyDXNfTtGH8RstkQ"
-    alt: "Volunteer Teaching in Rural Areas"
+    alt: "Volunteer Teaching for Children in Underserved Communities"
     visible: true
 
   - image: "/assets/pictures/volunteer-wedding-photography.jpg"
