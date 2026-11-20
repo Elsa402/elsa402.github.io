@@ -10,11 +10,12 @@ activities:
     visible: true
 
   - image: "/assets/pictures/nolo-documentary-cover.jpg"
+    image_fit: "contain"
     type: "Multimedia Storytelling"
     context: "2023 / Milan (Italy)"
     activity: "Documentary Filmmaking: Gentrification in Milan's NoLo District"
     page_url: "/activities/nolo-documentary/"
-    alt: "A street scene from the documentary about gentrification in Milan's NoLo district"
+    alt: "NoLo title artwork from the documentary about gentrification in Milan's NoLo district"
     visible: true
 
   - image: "/assets/pictures/best-debater.jpg"

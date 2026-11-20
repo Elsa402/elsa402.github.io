@@ -696,21 +696,29 @@ title: Home
   {% if visible_activities.size > 0 %}
   <div class="picture-grid">
     {% for picture in visible_activities %}
-    <article class="picture-card{% if picture.page_url %} picture-card-linked{% endif %}">
-      {% if picture.page_url %}
-      <a class="picture-card-primary-link" href="{{ picture.page_url | prepend: site.baseurl }}" target="_blank" rel="noopener noreferrer" aria-label="View {{ picture.activity }}"></a>
-      {% endif %}
-      <div class="picture-card-image-wrap{% if picture.url %} has-coverage{% endif %}">
-        <img class="picture-card-image" src="{{ picture.image | prepend: site.baseurl }}" alt="{{ picture.alt | default: picture.activity }}" loading="lazy" decoding="async">
-        {% if picture.url %}
-        <div class="activity-coverage-overlay">
-          <a class="project-resource-link activity-coverage-link" href="{{ picture.url }}" target="_blank" rel="noopener noreferrer" aria-label="View media coverage for {{ picture.activity }}" title="Media Coverage">
+    <article class="picture-card">
+      <div class="picture-card-image-wrap{% if picture.url or picture.page_url %} has-action{% endif %}">
+        <img class="picture-card-image{% if picture.image_fit == 'contain' %} picture-card-image-contain{% endif %}" src="{{ picture.image | prepend: site.baseurl }}" alt="{{ picture.alt | default: picture.activity }}" loading="lazy" decoding="async">
+        {% if picture.url or picture.page_url %}
+        <div class="activity-resource-overlay">
+          {% if picture.page_url %}
+          <a class="project-resource-link activity-resource-link" href="{{ picture.page_url | prepend: site.baseurl }}" target="_blank" rel="noopener noreferrer" aria-label="View content for {{ picture.activity }}" title="View Content">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6.75 3.5h7.5L19 8.25v12.25H6.75z"/>
+              <path d="M14.25 3.5v4.75H19M9.5 12h6M9.5 15.5h6"/>
+            </svg>
+            <span class="u-visually-hidden">View Content</span>
+          </a>
+          {% endif %}
+          {% if picture.url %}
+          <a class="project-resource-link activity-resource-link" href="{{ picture.url }}" target="_blank" rel="noopener noreferrer" aria-label="View media coverage for {{ picture.activity }}" title="Media Coverage">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path d="M4 11.25v2.5h3.25L16.5 18V7L7.25 11.25zM7.25 13.75l1.5 5h3"/>
               <path d="M19 9.25c.75.75 1.15 1.65 1.15 2.75S19.75 14 19 14.75"/>
             </svg>
             <span class="u-visually-hidden">Media Coverage</span>
           </a>
+          {% endif %}
         </div>
         {% endif %}
       </div>
